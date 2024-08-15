@@ -1,4 +1,4 @@
-import insta from "../../assets/insta.png"
+ import insta from "../../assets/insta.png"
 import web from "../../assets/web.png"
 import twitter from "../../assets/twitter.png"
 import youtube from "../../assets/youtube.png"
