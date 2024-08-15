@@ -1,0 +1,17 @@
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.footerSide{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+}
+.footerSide > p{
+    display: block;
+}
+input::placeholder{
+    color: white;
+}

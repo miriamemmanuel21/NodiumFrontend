@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// // import './App.css';
+// import {BrowserRouter, Route, Routes} from "react-router-dom";
+// import Footer from "./Component/Footer";
+// import Part from "./Component/Part";
+// import Navbar from "./Component/NavBar";
+//
+// function App() {
+//   return (
+//       <BrowserRouter>
+//         <Routes>
+//             {/*<Route  path="/" element={<Navbar/>}/>*/}
+//           <Route path="/" element={<Footer />}/>
+//           <Route path="/" element=<Part />/>
+//
+//
+//         </Routes>
+//       </BrowserRouter>
+//   )
+// }
+//
+// export default App;
+import {useRoutes} from "react-router-dom";
+import {Route} from "./route/Route";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function  App (){
+    return(
+        useRoutes(Route)
+    )
 }
-
 export default App;
