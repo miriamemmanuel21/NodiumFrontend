@@ -1,39 +1,83 @@
 .search-bar-container {
-    text-align: center;
-    background-color: seagreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/678686c47c024e18e773c75e90aaab1c-1705999902381/hero-xl-x1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
     padding: 20px;
-    color: white;
+    border-radius: 16px;
+    color: rgb(98, 100, 106);
+    font-family: Macan, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 75px;
+    margin-right: 75px;
 }
 
 .search-bar-container h2 {
     margin-bottom: 20px;
+    font-size: 36px;
+    text-align: center;
+    color: white;
 }
 
-.search-bar-container input {
-    width: 60%;
+.search-bar-container form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar-container input[type="text"] {
+    width: 300px;
     padding: 10px;
+    border: 1px solid rgb(98, 100, 106);
+    border-radius: 8px 0 0 8px; /* Rounded corners for left side */
     font-size: 16px;
-    border-radius: 5px;
+}
+
+.search-bar-container button {
+    padding: 10px 20px;
     border: none;
+    border-radius: 0 8px 8px 0; /* Rounded corners for right side */
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-bar-container button:hover {
+    background-color: #005c25; /* Darker green on hover */
+}
+
+.search-bar-container button svg {
+    fill: white;
 }
 
 .trusted-by {
+    text-align: center;
     margin-top: 20px;
 }
 
-.trusted-by p {
-    margin: 0;
-    font-size: 14px;
+.trusted-by span {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: dimgrey;
 }
 
-.logos {
+.trusted-by ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 10px;
 }
 
-.logos img {
-    width: 50px;
-    height: auto;
+.trusted-by li {
+    display: inline-block;
+}
+
+.trusted-by img {
+    display: block;
 }

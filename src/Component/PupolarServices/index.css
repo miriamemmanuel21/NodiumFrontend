@@ -1,6 +1,15 @@
 .popular-services {
-    text-align: center;
-    margin: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 12px;
+    padding: 32px 0;
 }
 
 .services-list {
