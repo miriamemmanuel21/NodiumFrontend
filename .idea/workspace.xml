@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Component/NavBar/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/NavBar/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/PupolarServices/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/PupolarServices/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/SearchBar/SearchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/SearchBar/SearchBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/SearchBar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/SearchBar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/netfix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/netflix.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/Aurthentication/Login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/DashBoard/Customer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/DashBoard/ServiceProvider" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/NavBar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/NavBar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/lady.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/lady.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/Route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/Route.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +26,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -31,24 +45,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.App.js.executor": "Run",
-    "Node.js.index.jsx.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/oladi/WebstormProjects/NodiumFrontend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mimzy&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/NodiumFrontend/src/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\DELL\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,6 +83,18 @@
       <workItem from="1723660638237" duration="597000" />
       <workItem from="1723738494921" duration="7306000" />
       <workItem from="1723760394843" duration="23288000" />
+      <workItem from="1723813337642" duration="9822000" />
+      <workItem from="1724074831680" duration="9348000" />
+      <workItem from="1724163763608" duration="2588000" />
+      <workItem from="1724246485003" duration="11563000" />
+      <workItem from="1724340450901" duration="1999000" />
+      <workItem from="1724594206078" duration="378000" />
+      <workItem from="1724789311483" duration="304000" />
+      <workItem from="1724789728997" duration="1915000" />
+      <workItem from="1724792699721" duration="10124000" />
+      <workItem from="1724847490935" duration="1876000" />
+      <workItem from="1724958551903" duration="10617000" />
+      <workItem from="1725275437031" duration="955000" />
     </task>
     <servers />
   </component>
