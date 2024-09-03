@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -17,13 +16,14 @@ body {
     padding: 10px 20px;
     background-color: #FFFDFA;
     border-bottom: 1px solid #FFFDFA;
+    position: absolute;
 }
 
 .logo {
     font-size: 30px;
     font-weight: bold;
     color: #252324;
-    margin-left: 75px;
+    margin-inline: 75px;
 }
 
 .nav-links {
@@ -33,6 +33,7 @@ body {
 }
 
 .nav-links li {
+    gap: 40px;
 
 }
 
@@ -62,4 +63,12 @@ body {
 .join-button:hover {
     background-color: #3ED625;
     color: #FFFDFA;
+}
+
+nav ul li a:hover {
+    color: #3ED625;
+}
+
+.MuiMenuItem-root:hover {
+    color: #3ED625 !important;
 }

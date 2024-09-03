@@ -8,6 +8,7 @@ function PopularServices() {
         { title: 'Architecture & Interior Design', icon: '🏠', color: 'pink' },
         { title: 'Social Media Marketing', icon: '📱', color: 'yellow' },
         { title: 'Voice Over', icon: '🎤', color: 'lightgreen' },
+        { title: 'Software Development', icon: ''}
     ];
 
     return (
@@ -15,7 +16,7 @@ function PopularServices() {
             <h2>Popular services</h2>
             <div className="services-list">
                 {services.map((service, index) => (
-                    <div key={index} className="service" style={{ backgroundColor: service.color }}>
+                    <div key={index} className="service" style={{backgroundColor: service.color}}>
                         <span className="icon">{service.icon}</span>
                         <span className="title">{service.title}</span>
                     </div>
