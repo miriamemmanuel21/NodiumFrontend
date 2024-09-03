@@ -20,11 +20,10 @@ const Navbar = () => {
     const navigate = useNavigate();
     const handleNavigate=() =>  {
         navigate('/login');
-
     }
     return (
         <div>
-        <nav className="lg:flex justify-between items-center mb-8 pt-6 bg-white hidden">
+        <nav className="lg:mx-[90px] lg:flex justify-between items-center mb-8 pt-6 bg-white hidden">
             <div className="font-extrabold text-3xl">Nodium</div>
 
                 <div>
@@ -32,7 +31,7 @@ const Navbar = () => {
                         <li><a href="#">Explore</a></li>
                         <li><a href="#">English</a></li>
                         <li><a href="/signup">SignUp</a></li>
-                        <li><a href="#">BecomeAJobProvider</a></li>
+                        <li><a href="#">Become A Provider</a></li>
                     </ul>
                 </div>
 
@@ -42,10 +41,6 @@ const Navbar = () => {
                         onClick={handleNavigate}
                     >LogIn</button>
                 </div>
-
-
-
-
         </nav>
             <nav className={`flex justify-between items-center lg:hidden px-6`}>
                 <div className="font-extrabold text-3xl">Nodium</div>
