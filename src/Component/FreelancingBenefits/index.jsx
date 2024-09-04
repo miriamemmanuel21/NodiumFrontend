@@ -8,7 +8,7 @@ const FreelanceBenefits = () => {
             </h2>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', textAlign: 'left' }}>
-                <div style={{ flex: '1', margin: '0 20px' }}>
+                <div style={{ flex: '1', margin: '0 20px', borderRadius: '30%', display: 'flex', flexDirection: 'column', gap: '10px', transition: 'opacity 0.3s', ':hover': { opacity: 0.5 } }}>
                     <div style={{ fontSize: '30px', marginBottom: '15px' }}>📊</div> {/* Icon Placeholder */}
                     <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Over 700 categories</h3>
                     <p style={{ color: '#555', fontSize: '16px' }}>
@@ -16,7 +16,7 @@ const FreelanceBenefits = () => {
                     </p>
                 </div>
 
-                <div style={{ flex: '1', margin: '0 20px' }}>
+                <div style={{ flex: '1', margin: '0 20px', borderRadius: '30%', display: 'flex', flexDirection: 'column', gap: '10px', transition: 'opacity 0.3s', ':hover': { opacity: 0.5 } }}>
                     <div style={{ fontSize: '30px', marginBottom: '15px' }}>💼</div> {/* Icon Placeholder */}
                     <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Clear, transparent pricing</h3>
                     <p style={{ color: '#555', fontSize: '16px' }}>
@@ -24,7 +24,7 @@ const FreelanceBenefits = () => {
                     </p>
                 </div>
 
-                <div style={{ flex: '1', margin: '0 20px' }}>
+                <div style={{ flex: '1', margin: '0 20px', borderRadius: '30%', display: 'flex', flexDirection: 'column', gap: '10px', transition: 'opacity 0.3s', ':hover': { opacity: 0.5 } }}>
                     <div style={{ fontSize: '30px', marginBottom: '15px' }}>⚡</div> {/* Icon Placeholder */}
                     <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>Quality work done faster</h3>
                     <p style={{ color: '#555', fontSize: '16px' }}>
@@ -32,7 +32,7 @@ const FreelanceBenefits = () => {
                     </p>
                 </div>
 
-                <div style={{ flex: '1', margin: '0 20px' }}>
+                <div style={{ flex: '1', margin: '0 20px', borderRadius: '30%', display: 'flex', flexDirection: 'column', gap: '10px', transition: 'opacity 0.3s', ':hover': { opacity: 0.5 } }}>
                     <div style={{ fontSize: '30px', marginBottom: '15px' }}>🌐</div> {/* Icon Placeholder */}
                     <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>24/7 award-winning support</h3>
                     <p style={{ color: '#555', fontSize: '16px' }}>

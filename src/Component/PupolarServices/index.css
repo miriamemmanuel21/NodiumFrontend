@@ -37,3 +37,94 @@
 .title {
     font-size: 18px;
 }
+
+.carousel-wrapper .arrow-btn.clickable {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.carousel-wrapper .right {
+    right: 0;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+}
+.carousel-wrapper .arrow-btn {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    border: 0;
+    border-radius: 50%;
+    bottom: 0;
+    display: none;
+    height: 48px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 48px;
+    z-index: 1;
+}
+.box-shadow-z1 {
+    -webkit-box-shadow: 0 1.2px 1.92251px rgba(0, 0, 0, .02), 0 2px 3.68135px rgba(0, 0, 0, .04), 0 1px 5px rgba(0, 0, 0, .05);
+    box-shadow: 0 1.2px 1.92251px rgba(0, 0, 0, .02), 0 2px 3.68135px rgba(0, 0, 0, .04), 0 1px 5px rgba(0, 0, 0, .05);
+}
+injected stylesheet
+.hoveredForExtractor {
+    outline-offset: -3px !important;
+    z-index: 999 !important;
+    outline: rgb(0, 255, 255) solid 7px !important;
+}
+[role=button], button, input[type=button], input[type=submit] {
+    cursor: pointer;
+}
+button {
+    background: none;
+    border: 0;
+    font: inherit;
+}
+button, input, select {
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+button {
+    appearance: auto;text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+style attribute {
+    --slide-padding: 16px;
+    --slides-to-show: 1;
+}
+body {
+    background-color: #fff;
+    color: #62646a;
+    font: 400 16px / 24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+    position: relative;
+    width: 100%;
+}
