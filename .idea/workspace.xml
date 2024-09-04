@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/Customer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/DashBoard/Customer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/ServiceProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/DashBoard/ServiceProvider.jsx" afterDir="false" />
     </list>
@@ -94,7 +95,8 @@
       <workItem from="1725326856324" duration="2376000" />
       <workItem from="1725334393707" duration="6317000" />
       <workItem from="1725366453998" duration="12496000" />
-      <workItem from="1725412738384" duration="2536000" />
+      <workItem from="1725412738384" duration="4053000" />
+      <workItem from="1725429450804" duration="2613000" />
     </task>
     <servers />
   </component>
