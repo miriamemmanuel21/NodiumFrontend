@@ -4,6 +4,8 @@ import Customer from '../DashBoard/Customer';
 
 const SignupForm = () => {
     const [formData, setFormData] = useState({
+        'first-name': '',
+        'last-name': '',
         username: '',
         email: '',
         password: '',
@@ -18,9 +20,28 @@ const SignupForm = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setUserRole(formData.role);
+
+        // Example form submission logic
+        try {
+            const response = await fetch('https://example.com/api/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                console.log('Form submitted successfully');
+            } else {
+                console.error('Form submission failed');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
     };
 
     if (userRole === 'Service Provider') {
@@ -49,6 +70,7 @@ const SignupForm = () => {
                             required
                         />
                     </div>
+
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="last-name">
                             Last Name
@@ -61,6 +83,22 @@ const SignupForm = () => {
                             onChange={handleChange}
                             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Enter your last name"
+                            required
+                        />
+                    </div>
+
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+                            Username
+                        </label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            value={formData['username']}
+                            onChange={handleChange}
+                            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Enter your username"
                             required
                         />
                     </div>
@@ -112,7 +150,7 @@ const SignupForm = () => {
                     <div className="flex items-center justify-between">
                         <button
                             type="submit"
-                            className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full bg-[#1dbf73] text-white font-bold py-2 px-4 rounded-lg hover:bg-[#17a864] focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                             Sign Up
                         </button>
