@@ -29,29 +29,51 @@ const ServiceProvider = () => {
                 {/* Main Content */}
                 <main className="flex-1 p-8">
                     {/* Hero Section */}
-                    <section className="bg-cover bg-center h-64 flex flex-col justify-center items-center text-white" style={{ position: 'relative' }}>
-                        <video src="https://sg.fiverrcdn.com/packages_lp/cover_video.mp4" poster="//assetsv2.fiverrcdn.com/assets/v2_photos/packages-lp/bg-first-hero-d92a52e389008a9c36e1cb59634ae244.jpg" autoplay="" loop="" muted="" preload="auto" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 1 }}>
-                            <source src="https://sg.fiverrcdn.com/packages_lp/cover_video.mp4" type="video/mp4" />
-                            <source src="https://sg.fiverrcdn.com/packages_lp/cover_video.webm" type="video/webm" />
-                            <source src="https://sg.fiverrcdn.com/packages_lp/cover_video.ogv" type="video/ogv" />
+                    <section className="bg-cover bg-center h-64 flex flex-col justify-center items-center text-white"
+                             style={{position: 'relative'}}>
+                        <video
+                            src="https://sg.fiverrcdn.com/packages_lp/cover_video.mp4"
+                            poster="//assetsv2.fiverrcdn.com/assets/v2_photos/packages-lp/bg-first-hero-d92a52e389008a9c36e1cb59634ae244.jpg"
+                            autoPlay
+                            loop
+                            muted
+                            preload="auto"
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '600px', // Set the desired width
+                                height: '1080px', // Set the desired height
+                                opacity: 1,
+                            }}
+                        >
+                            <source src="https://sg.fiverrcdn.com/packages_lp/cover_video.mp4" type="video/mp4"/>
+                            <source src="https://sg.fiverrcdn.com/packages_lp/cover_video.webm" type="video/webm"/>
+                            <source src="https://sg.fiverrcdn.com/packages_lp/cover_video.ogv" type="video/ogv"/>
                         </video>
-                        <div style={{ position: 'relative', zIndex: 1 }}>
+                        <div style={{position: 'relative', zIndex: 1}}>
                             <h1 className="text-5xl font-extrabold mb-2">Start Selling Your Services</h1>
                             <p className="text-xl mb-4">Join our community of talented freelancers</p>
-                            <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded transition duration-300 ease-in-out">Start Selling</button>
+                            <button
+                                className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded transition duration-300 ease-in-out">
+                                Start Selling
+                            </button>
                         </div>
                     </section>
+
 
                     {/* Promotional Section */}
                     <section className="mt-8 bg-gray-100 p-8 rounded-lg shadow-lg">
                         <h2 className="text-3xl font-bold mb-4">Promotional Content</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <img src="https://via.placeholder.com/300x200" alt="Promotion 1" className="w-full h-auto rounded-lg mb-4"/>
+                                <img src="https://via.placeholder.com/300x200" alt="Promotion 1"
+                                     className="w-full h-auto rounded-lg mb-4"/>
                                 <p className="text-gray-700">Check out our new features and offers!</p>
                             </div>
                             <div>
-                                <img src="https://via.placeholder.com/300x200" alt="Promotion 2" className="w-full h-auto rounded-lg mb-4"/>
+                                <img src="https://via.placeholder.com/300x200" alt="Promotion 2"
+                                     className="w-full h-auto rounded-lg mb-4"/>
                                 <p className="text-gray-700">Boost your sales with our premium services.</p>
                             </div>
                         </div>
@@ -62,7 +84,7 @@ const ServiceProvider = () => {
                         <h2 className="text-3xl font-bold mb-6">Meet Our Talented Freelancers</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <div className="text-center">
-                                <img src="https://via.placeholder.com/150" alt="Freelancer 1" className="mx-auto rounded-full mb-2" />
+                            <img src="https://via.placeholder.com/150" alt="Freelancer 1" className="mx-auto rounded-full mb-2" />
                                 <p className="font-semibold">John Doe</p>
                                 <p className="text-gray-600">Web Developer</p>
                             </div>
