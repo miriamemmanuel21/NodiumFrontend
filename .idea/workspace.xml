@@ -45,6 +45,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
+=======
+    "git-widget-placeholder": "David",
+>>>>>>> origin/Abbey
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/DELL/java idea projects/NodiumFrontend",
     "node.js.detected.package.eslint": "true",
@@ -89,11 +93,16 @@
       <workItem from="1725326856324" duration="2376000" />
       <workItem from="1725334393707" duration="6317000" />
       <workItem from="1725366453998" duration="12496000" />
+<<<<<<< HEAD
       <workItem from="1725412738384" duration="4053000" />
       <workItem from="1725429450804" duration="2613000" />
       <workItem from="1725452053601" duration="125000" />
       <workItem from="1725508678337" duration="7494000" />
       <workItem from="1725535477247" duration="157000" />
+=======
+      <workItem from="1725412738384" duration="2536000" />
+      <workItem from="1725426662947" duration="7598000" />
+>>>>>>> origin/Abbey
     </task>
     <servers />
   </component>
