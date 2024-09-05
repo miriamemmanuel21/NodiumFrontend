@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 const OTPPage = ({ onBackToLogin }) => {
     const [otp, setOtp] = useState('');
     const [timer, setTimer] = useState(60);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     useEffect(() => {
         if (timer > 0) {
@@ -18,10 +20,33 @@ const OTPPage = ({ onBackToLogin }) => {
         setOtp(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle OTP validation logic here
-        console.log("Submitted OTP:", otp);
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('/api/verify-otp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ otp }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                console.log("OTP verified successfully");
+                // Proceed to the next step
+            } else {
+                setError('Invalid OTP. Please try again.');
+            }
+        } catch (err) {
+            setError('An error occurred. Please try again later.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -47,12 +72,14 @@ const OTPPage = ({ onBackToLogin }) => {
                     <div className="mb-4 text-center text-gray-700">
                         {timer > 0 ? `Resend OTP in ${timer} seconds` : 'You can now resend OTP'}
                     </div>
+                    {error && <div className="mb-4 text-red-500 text-center">{error}</div>}
                     <div className="flex items-center justify-between">
                         <button
                             type="submit"
                             className="w-full bg-[#1dbf73] text-white font-bold py-2 px-4 rounded-lg hover:bg-[#17a864] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            disabled={loading}
                         >
-                            Submit
+                            {loading ? 'Submitting...' : 'Submit'}
                         </button>
                     </div>
                 </form>
@@ -79,6 +106,8 @@ const LoginForm = () => {
 
     const [rememberMe, setRememberMe] = useState(false);
     const [showOtpPage, setShowOtpPage] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     const handleChange = (e) => {
         setFormData({
@@ -91,10 +120,33 @@ const LoginForm = () => {
         setRememberMe(e.target.checked);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log({ ...formData, rememberMe });
+        setLoading(true);
+        setError('');
+
+        try {
+            const encryptedPassword = btoa(formData.password); // Simple Base64 encryption
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ ...formData, password: encryptedPassword, rememberMe }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setShowOtpPage(true);
+            } else {
+                setError('Invalid credentials. Please try again.');
+            }
+        } catch (err) {
+            setError('An error occurred. Please try again later.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     const handleForgotPassword = () => {
@@ -171,12 +223,14 @@ const LoginForm = () => {
                             Remember Me
                         </label>
                     </div>
+                    {error && <div className="mb-4 text-red-500 text-center">{error}</div>}
                     <div className="flex items-center justify-between">
                         <button
                             type="submit"
                             className="w-full bg-[#1dbf73] text-white font-bold py-2 px-4 rounded-lg hover:bg-[#17a864] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            disabled={loading}
                         >
-                            Login
+                            {loading ? 'Logging in...' : 'Login'}
                         </button>
                     </div>
                 </form>
