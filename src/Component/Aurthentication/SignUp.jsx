@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ServiceProvider from '../DashBoard/ServiceProvider';
 import Customer from '../DashBoard/Customer';
 
@@ -12,6 +12,23 @@ const SignupForm = () => {
         role: ''
     });
     const [userRole, setUserRole] = useState('');
+    const [error, setError] = useState('');
+    const [csrfToken, setCsrfToken] = useState('');
+
+    useEffect(() => {
+        // Fetch CSRF token from the server
+        const fetchCsrfToken = async () => {
+            try {
+                const response = await fetch('https://example.com/api/csrf-token');
+                const data = await response.json();
+                setCsrfToken(data.csrfToken);
+            } catch (error) {
+                console.error('Error fetching CSRF token:', error);
+            }
+        };
+
+        fetchCsrfToken();
+    }, []);
 
     const handleChange = (e) => {
         setFormData({
@@ -20,16 +37,28 @@ const SignupForm = () => {
         })
     };
 
+    const validatePassword = (password) => {
+        const strongPasswordPattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$/;
+        return strongPasswordPattern.test(password);
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setUserRole(formData.role);
+
+        // Client-side password validation
+        if (!validatePassword(formData.password)) {
+            setError('Password must be at least 8 characters long and include a number and a special character.');
+            return;
+        }
 
         // Example form submission logic
         try {
             const response = await fetch('https://example.com/api/signup', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'X-CSRF-Token': csrfToken // Include CSRF token in the headers
                 },
                 body: JSON.stringify(formData)
             });
@@ -37,10 +66,10 @@ const SignupForm = () => {
             if (response.ok) {
                 console.log('Form submitted successfully');
             } else {
-                console.error('Form submission failed');
+                setError('Form submission failed: ' + response.statusText);
             }
         } catch (error) {
-            console.error('Error submitting form:', error);
+            setError('Error submitting form: ' + error.message);
         }
     };
 

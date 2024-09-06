@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="" />
+    <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/SEOspecialist.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/client1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/client2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/client3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/contentwriter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/digitalmarketer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/graphicdesigner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/promo1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/promo2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/softwareengineer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/webdeveloper.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/Customer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/DashBoard/Customer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/ServiceProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/DashBoard/ServiceProvider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Footer/index.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +53,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2kYvGX1Nwj1GAT4Mv6ewZAoSUAN" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,19 +64,21 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Node.js.App.js.executor": "Run",
+    "Node.js.ProviderBusinessPage.html.executor": "Run",
+    "Node.js.ProviderBusinessPage.jsx.executor": "Run",
     "Node.js.index.jsx.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-<<<<<<< HEAD
-=======
     "git-widget-placeholder": "David",
->>>>>>> origin/Abbey
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/DELL/java idea projects/NodiumFrontend",
+    "last_opened_file_path": "C:/Users/oladi/WebstormProjects/NodiumFrontend/src/assets",
+
+    "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.eslint": "",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -63,8 +88,19 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\oladi\WebstormProjects\NodiumFrontend\src\assets" />
       <recent name="C:\Users\oladi\WebstormProjects\NodiumFrontend\public" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ProviderBusinessPage.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" working-dir="$PROJECT_DIR$/src/Component/DashBoard">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.ProviderBusinessPage.jsx" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -93,16 +129,21 @@
       <workItem from="1725326856324" duration="2376000" />
       <workItem from="1725334393707" duration="6317000" />
       <workItem from="1725366453998" duration="12496000" />
-<<<<<<< HEAD
+
       <workItem from="1725412738384" duration="4053000" />
       <workItem from="1725429450804" duration="2613000" />
       <workItem from="1725452053601" duration="125000" />
+
+      <workItem from="1725508678337" duration="10744000" />
+      <workItem from="1725562370714" duration="14585000" />
+      <workItem from="1725609021833" duration="10320000" />
+
       <workItem from="1725508678337" duration="7494000" />
       <workItem from="1725535477247" duration="157000" />
-=======
+
       <workItem from="1725412738384" duration="2536000" />
       <workItem from="1725426662947" duration="7598000" />
->>>>>>> origin/Abbey
+
     </task>
     <servers />
   </component>
