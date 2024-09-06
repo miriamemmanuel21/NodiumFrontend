@@ -72,6 +72,8 @@
     "git-widget-placeholder": "David",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/oladi/WebstormProjects/NodiumFrontend/src/assets",
+
+    "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -127,12 +129,21 @@
       <workItem from="1725326856324" duration="2376000" />
       <workItem from="1725334393707" duration="6317000" />
       <workItem from="1725366453998" duration="12496000" />
+
       <workItem from="1725412738384" duration="4053000" />
       <workItem from="1725429450804" duration="2613000" />
       <workItem from="1725452053601" duration="125000" />
+
       <workItem from="1725508678337" duration="10744000" />
       <workItem from="1725562370714" duration="14585000" />
       <workItem from="1725609021833" duration="10320000" />
+
+      <workItem from="1725508678337" duration="7494000" />
+      <workItem from="1725535477247" duration="157000" />
+
+      <workItem from="1725412738384" duration="2536000" />
+      <workItem from="1725426662947" duration="7598000" />
+
     </task>
     <servers />
   </component>

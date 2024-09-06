@@ -34,7 +34,7 @@ const SignupForm = () => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
-        });
+        })
     };
 
     const validatePassword = (password) => {
