@@ -80,6 +80,7 @@ const Footer = () => {
                 </select>
 
                 <select>
+                    <option>NGN</option>
                     <option>USD</option>
                     <option>EUR</option>
                     <option>GBP</option>
