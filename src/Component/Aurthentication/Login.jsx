@@ -38,7 +38,6 @@ const OTPPage = ({ onBackToLogin }) => {
 
             if (data.success) {
                 console.log("OTP verified successfully");
-                // Proceed to the next step
             } else {
                 setError('Invalid OTP. Please try again.');
             }
@@ -50,7 +49,7 @@ const OTPPage = ({ onBackToLogin }) => {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-100">
+        <div className="flex justify-center items-center h-screen bg-transparent">
             <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold text-center mb-8">Enter OTP</h2>
                 <form onSubmit={handleSubmit}>
@@ -108,6 +107,19 @@ const LoginForm = () => {
     const [showOtpPage, setShowOtpPage] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [color, setColor] = useState('#1dbf73');
+
+    useEffect(() => {
+        const colors = ['#1dbf73', '#17a864'];
+        let index = 0;
+        const interval = setInterval(() => {
+            setColor(colors[index]);
+            index = (index + 1) % colors.length;
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     const handleChange = (e) => {
         setFormData({
@@ -157,30 +169,20 @@ const LoginForm = () => {
         setShowOtpPage(false);
     };
 
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
     if (showOtpPage) {
         return <OTPPage onBackToLogin={handleBackToLogin} />;
     }
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-100">
+        <div className="flex justify-center items-center h-screen" style={{ background: 'url(your-background-image-url) no-repeat center center/cover' }}>
             <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+                <h1 className="text-4xl font-bold text-center mb-4" style={{ color: color }}>Nodium</h1>
                 <h2 className="text-2xl font-bold text-center mb-8">Login</h2>
                 <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
-                            Username
-                        </label>
-                        <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            value={formData.username}
-                            onChange={handleChange}
-                            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Enter your username"
-                            required
-                        />
-                    </div>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                             Email
@@ -196,12 +198,12 @@ const LoginForm = () => {
                             required
                         />
                     </div>
-                    <div className="mb-6">
+                    <div className="mb-6 relative">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                             Password
                         </label>
                         <input
-                            type="password"
+                            type={showPassword ? 'text' : 'password'}
                             id="password"
                             name="password"
                             value={formData.password}
@@ -210,6 +212,12 @@ const LoginForm = () => {
                             placeholder="Enter your password"
                             required
                         />
+                        <span
+                            onClick={togglePasswordVisibility}
+                            className="absolute top-9 right-3 cursor-pointer"
+                        >
+                            {showPassword ? '🙈' : '👁️'}
+                        </span>
                     </div>
                     <div className="mb-4">
                         <label className="flex items-center">

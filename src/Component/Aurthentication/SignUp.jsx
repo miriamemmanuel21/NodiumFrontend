@@ -1,33 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import ServiceProvider from '../DashBoard/ServiceProvider';
 import Customer from '../DashBoard/Customer';
 
 const SignupForm = () => {
     const [formData, setFormData] = useState({
-        'first-name': '',
-        'last-name': '',
-        username: '',
+        'firstname': '',
+        'lastname': '',
         email: '',
         password: '',
         role: ''
     });
     const [userRole, setUserRole] = useState('');
     const [error, setError] = useState('');
-    const [csrfToken, setCsrfToken] = useState('');
+    const [color, setColor] = useState('#1dbf73');
 
     useEffect(() => {
-        // Fetch CSRF token from the server
-        const fetchCsrfToken = async () => {
-            try {
-                const response = await fetch('https://example.com/api/csrf-token');
-                const data = await response.json();
-                setCsrfToken(data.csrfToken);
-            } catch (error) {
-                console.error('Error fetching CSRF token:', error);
-            }
-        };
+        const colors = ['#1dbf73', '#17a864'];
+        let index = 0;
+        const interval = setInterval(() => {
+            setColor(colors[index]);
+            index = (index + 1) % colors.length;
+        }, 1000);
 
-        fetchCsrfToken();
+        return () => clearInterval(interval);
     }, []);
 
     const handleChange = (e) => {
@@ -52,13 +47,11 @@ const SignupForm = () => {
             return;
         }
 
-        // Example form submission logic
         try {
             const response = await fetch('https://example.com/api/signup', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-Token': csrfToken // Include CSRF token in the headers
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(formData)
             });
@@ -82,17 +75,18 @@ const SignupForm = () => {
     return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
             <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+                <h1 className="text-4xl font-bold text-center mb-4" style={{color: color}}>Nodium</h1>
                 <h2 className="text-2xl font-bold text-center mb-8">Sign Up</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first-name">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstname">
                             First Name
                         </label>
                         <input
                             type="text"
-                            id="first-name"
-                            name="first-name"
-                            value={formData['first-name']}
+                            id="firstname"
+                            name="firstname"
+                            value={formData['firstname']}
                             onChange={handleChange}
                             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Enter your first name"
@@ -101,33 +95,17 @@ const SignupForm = () => {
                     </div>
 
                     <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="last-name">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastname">
                             Last Name
                         </label>
                         <input
                             type="text"
-                            id="last-name"
-                            name="last-name"
-                            value={formData['last-name']}
+                            id="lastname"
+                            name="lastname"
+                            value={formData['lastname']}
                             onChange={handleChange}
                             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Enter your last name"
-                            required
-                        />
-                    </div>
-
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
-                            Username
-                        </label>
-                        <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            value={formData['username']}
-                            onChange={handleChange}
-                            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Enter your username"
                             required
                         />
                     </div>

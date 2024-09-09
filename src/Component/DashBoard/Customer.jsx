@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Dashboard = () => {
   const [selectedService, setSelectedService] = useState('');
   const navigate = useNavigate();
-  const username = 'Miriam';
+  const firstname = 'Miriam';
 
   const services = [ 'WebDeveloper', 'Marketing', 'CustomerSupport','TechnicalWritter','MobileAppDeveloper','Cloud Engineer'];
 
@@ -35,7 +35,7 @@ const Dashboard = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="bg-white shadow-lg rounded-lg p-12 max-w-2xl text-center">
-        <h1 className="text-7xl font-bold text-green-600 mb-8">Welcome, {username}!</h1>
+        <h1 className="text-7xl font-bold text-green-600 mb-8">Welcome, {firstname}!</h1>
         <h2 className="text-3xl mb-6">What service can we offer you today?</h2>
 
         <div className="mb-6">

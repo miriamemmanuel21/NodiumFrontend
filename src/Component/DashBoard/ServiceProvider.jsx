@@ -15,7 +15,7 @@ import promo2 from '../../assets/promo2.jpg';
 
 const ServiceProviderDashboard = () => {
     const navigate = useNavigate();
-    
+
     return (
         <div className="flex flex-col min-h-screen">
             {/* Navigation Bar */}
@@ -64,7 +64,6 @@ const ServiceProviderDashboard = () => {
                             className="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300 ease-in-out"
                             onClick={() => navigate('/Component/DashBoard/ProviderBusinessPage')}
                         >
-                            className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded transition duration-300 ease-in-out">
                             Start Selling
                         </button>
                     </div>
@@ -140,37 +139,37 @@ const ServiceProviderDashboard = () => {
                     <h2 className="text-3xl font-bold mb-6">Meet Our Talented Service Providers</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div className="text-center">
-                            <img src={webDeveloperImage} alt="African Tech Guy 1" className="mx-auto rounded-full mb-2" 
+                            <img src={webDeveloperImage} alt="African Tech Guy 1" className="mx-auto rounded-full mb-2"
                                  style={{ width: '80%', height: 'auto', aspectRatio: '16/9', margin: '0 auto' }} />
                             <p className="font-semibold">Dapo Johnson</p>
                             <p className="text-gray-600">I am a Web Developer</p>
                         </div>
                         <div className="text-center">
-                            <img src={graphicDesignerImage} alt="African Tech Lady 1" className="mx-auto rounded-full mb-2" 
+                            <img src={graphicDesignerImage} alt="African Tech Lady 1" className="mx-auto rounded-full mb-2"
                                  style={{ width: '80%', height: 'auto', aspectRatio: '16/9', margin: '0 auto' }} />
                             <p className="font-semibold">Jane Smith</p>
                             <p className="text-gray-600">I am a Graphic Designer</p>
                         </div>
                         <div className="text-center">
-                            <img src={softwareEngineerImage} alt="African Software Engineer 1" className="mx-auto rounded-full mb-2" 
+                            <img src={softwareEngineerImage} alt="African Software Engineer 1" className="mx-auto rounded-full mb-2"
                                  style={{ width: '80%', height: 'auto', aspectRatio: '16/9', margin: '0 auto' }} />
                             <p className="font-semibold">Alex Johnson</p>
                             <p className="text-gray-600">I am a Software Engineer</p>
                         </div>
                         <div className="text-center">
-                            <img src={digitalMarketerImage} alt="African Tech Lady 2" className="mx-auto rounded-full mb-2" 
+                            <img src={digitalMarketerImage} alt="African Tech Lady 2" className="mx-auto rounded-full mb-2"
                                  style={{ width: '80%', height: 'auto', aspectRatio: '16/9', margin: '0 auto' }} />
                             <p className="font-semibold">Mary Jane</p>
                             <p className="text-gray-600">I am a Digital Marketer</p>
                         </div>
                         <div className="text-center">
-                            <img src={contentWriterImage} alt="African Tech Guy 2" className="mx-auto rounded-full mb-2" 
+                            <img src={contentWriterImage} alt="African Tech Guy 2" className="mx-auto rounded-full mb-2"
                                  style={{ width: '80%', height: 'auto', aspectRatio: '16/9', margin: '0 auto' }} />
                             <p className="font-semibold">Sarah Wilson</p>
                             <p className="text-gray-600">I am a Content Writer</p>
                         </div>
                         <div className="text-center">
-                            <img src={sEOSpecialistImage} alt="African Tech Lady 3" className="mx-auto rounded-full mb-2" 
+                            <img src={sEOSpecialistImage} alt="African Tech Lady 3" className="mx-auto rounded-full mb-2"
                                  style={{ width: '80%', height: 'auto', aspectRatio: '16/9', margin: '0 auto' }} />
                             <p className="font-semibold">Michael Brown</p>
                             <p className="text-gray-600">I am a SEO Specialist</p>
