@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/NodiumFrontend1.iml" filepath="$PROJECT_DIR$/.idea/NodiumFrontend1.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/.idea/NodiumFrontend.iml" filepath="$PROJECT_DIR$/.idea/NodiumFrontend.iml" />
->>>>>>> 13ff11413ce164d66a4c42d484b1275c5e616605
     </modules>
   </component>
 </project>
