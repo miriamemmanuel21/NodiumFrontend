@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaChartLine, FaEnvelope, FaStar, FaClipboardList, FaCogs, FaMoneyBillWave, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import webDeveloperImage from '../../assets/webdeveloper.jpg';
 import graphicDesignerImage from '../../assets/graphicdesigner.jpg';
 import softwareEngineerImage from '../../assets/softwareengineer.jpg';
@@ -13,6 +14,8 @@ import promo1 from '../../assets/promo1.jpg';
 import promo2 from '../../assets/promo2.jpg';
 
 const ServiceProviderDashboard = () => {
+    const navigate = useNavigate();
+    
     return (
         <div className="flex flex-col min-h-screen">
             {/* Navigation Bar */}
@@ -58,6 +61,9 @@ const ServiceProviderDashboard = () => {
                         <h1 className="text-5xl font-extrabold mb-2">Start Selling Your Services</h1>
                         <p className="text-xl mb-4">Join our community of talented freelancers</p>
                         <button
+                            className="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300 ease-in-out"
+                            onClick={() => navigate('/Component/DashBoard/ProviderBusinessPage')}
+                        >
                             className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded transition duration-300 ease-in-out">
                             Start Selling
                         </button>
