@@ -24,7 +24,6 @@ const SignupForm = () => {
         e.preventDefault();
         setUserRole(formData.role);
 
-        // Example form submission logic
         try {
             const response = await fetch('https://example.com/api/signup', {
                 method: 'POST',
