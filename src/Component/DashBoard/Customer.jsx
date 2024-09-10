@@ -15,20 +15,16 @@ const Dashboard = () => {
 
   const handleGoClick = () => {
     if (selectedService === 'WebDeveloper') {
-      // Navigate to the ServiceProviderDashboard for Web Developers
       navigate('/webdeveloper');
     } 
     if (selectedService === 'Marketing'){
         navigate('/Marketing');
     }
-    
     if (selectedService === 'CustomerSupport'){
         navigate('/Customer Support');
     }
     else if (selectedService) {
-
-      // Navigate to other service pages based on the selection
-     navigate(`/${selectedService.toLowerCase().replace(/\s+/g, '')}`);
+      navigate(`/${selectedService.toLowerCase().replace(/\s+/g, '')}`);
     }
   };
 
