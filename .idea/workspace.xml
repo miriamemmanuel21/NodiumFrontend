@@ -49,13 +49,14 @@
     &quot;Node.js.index.jsx.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;David&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/oladi/WebstormProjects/NodiumFrontend/src/assets&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/front-ends/NodiumFrontend/src/assets&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -66,8 +67,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\assets" />
       <recent name="C:\Users\oladi\WebstormProjects\NodiumFrontend\src\assets" />
       <recent name="C:\Users\oladi\WebstormProjects\NodiumFrontend\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\provider_components\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -113,10 +118,25 @@
       <workItem from="1725508678337" duration="10744000" />
       <workItem from="1725562370714" duration="14585000" />
       <workItem from="1725609021833" duration="12708000" />
+      <workItem from="1725894506573" duration="3223000" />
+      <workItem from="1725904034114" duration="472000" />
+      <workItem from="1725913299673" duration="9797000" />
+      <workItem from="1725949691083" duration="20546000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx</url>
+          <line>49</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
