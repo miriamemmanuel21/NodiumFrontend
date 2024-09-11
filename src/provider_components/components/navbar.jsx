@@ -156,7 +156,7 @@ export default function ProviderNavbar() {
     };
 
     return (
-            <div className={`px-[2vw] flex justify-center bg-gray-300 ${menuOpen?'bg':''}`}>
+            <div className={`px-[4vw] flex justify-center bg-white ${menuOpen?'bg':''} py-[1vw]`}>
                 <div className="flex flex-grow gap-4">
                     <img src={Image} className="mt-[4px] h-[30px] w-[30px] md:h-[45px] md:w-[45px]"  alt="logo" />
                     <p className="mt-[2vw] sm:mt-[0.5vw] text-md font-bold sm:text-3xl">Nodium</p>

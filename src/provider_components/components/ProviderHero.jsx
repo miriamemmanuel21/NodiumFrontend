@@ -3,6 +3,7 @@ import {Field, Form, Formik} from "formik";
 import Image from '../../assets/developer.jpeg'
 import {Icon} from "@iconify/react";
 import {toast} from "react-toastify";
+import MidBody from "./provider_hero_bottom";
 export default function Hero(){
     const submit = async (e)=>{
         try{
@@ -48,9 +49,9 @@ export default function Hero(){
             <ProviderNavbar/>
            <div className={'block lg:flex bg-green-700'}>
                <div className={'py-[20vh]'}>
-                   <div className={'px-[10vw] flex flex-col justify-center items-center gap-10'}>
-                       <p className={'font-extrabold text-7xl text-white'}> Unlock Your Dream path with Nodium</p>
-                       <p className={'text-white font-thin text-sm'}>
+                   <div className={'px-[5vw] lg:px-[10vw] flex flex-col justify-center items-center gap-10'}>
+                       <p className={'font-extrabold text-3xl lg:text-7xl text-white'}> Unlock Your Dream path with Nodium</p>
+                       <p className={'text-white font-semibold text-sm'}>
                            Looking for a new job can be both exciting and daunting.
                            Navigating the job market involves exploring various
                            avenues, including online job boards.
@@ -87,6 +88,7 @@ export default function Hero(){
                    lg:ml-[-5vw] lg:h-[35vw] h-auto mb-[20vw] lg:mb-0`}/>
                </div>
            </div>
+            <MidBody/>
         </div>
     )
 }

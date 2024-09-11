@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="" />
+    <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/provider_components/components/ProviderHero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/ProviderHero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/provider_components/components/provider_hero_bottom.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/provider_hero_bottom.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +66,7 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\DELL\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -122,6 +128,8 @@
       <workItem from="1725904034114" duration="472000" />
       <workItem from="1725913299673" duration="9797000" />
       <workItem from="1725949691083" duration="20546000" />
+      <workItem from="1726042420007" duration="2719000" />
+      <workItem from="1726045488145" duration="22000" />
     </task>
     <servers />
   </component>
@@ -138,5 +146,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
