@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="" />
+    <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/provider_components/dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/provider_components/components/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/navbar.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +76,7 @@
       <recent name="C:\Users\oladi\WebstormProjects\NodiumFrontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\provider_components" />
       <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\provider_components\components" />
     </key>
   </component>
