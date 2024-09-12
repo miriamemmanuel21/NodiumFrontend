@@ -176,7 +176,7 @@ export default function ProviderNavbar() {
                                     className="lg:p-[8px] text-md font-bold border-[1px] rounded-[4px]">
                                 Log out
                             </button>
-                            <button onClick={() => navigate('/adjob')}
+                            <button onClick={() => navigate('/addjob')}
                                     className="lg:p-[8px] text-md font-bold border-[1px] rounded-[4px]">
                                 Add Job
                             </button>
@@ -188,7 +188,7 @@ export default function ProviderNavbar() {
                                 hover:bg-green-500 transition-transform hover:text-white duration-1000 ease-in-out">
                                 Sign in
                             </button>
-                            <button onClick={() => navigate('/addjob')}
+                            <button onClick={() => navigate('/register')}
                                     className="lg:p-[8px] text-xl font-bold border-[2px] border-black rounded-[4px] bg-green-400">
                                 Add Job
                             </button>
