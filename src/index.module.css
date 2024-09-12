@@ -3,3 +3,6 @@
 .font{
     font-family: "Allura", sans-serif;
 }
+.divs> div{
+    display: block;
+}
