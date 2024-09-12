@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/provider_components/components/footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/404.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/components/ProviderHero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/ProviderHero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/components/provider_hero_bottom.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/provider_hero_bottom.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/components/sleekSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/sleekSlider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/Route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/Route.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

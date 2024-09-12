@@ -7,6 +7,7 @@ import CustomerSupport from "../Component/CustomerSupport/CustomerSurport";
 import WebDashboard from "../Component/WebDashboard/WebDeveloper";
 import Marketing from "../Component/Marketing/Marketing"
 import Hero from '../provider_components/components/ProviderHero'
+import Invalids from "../provider_components/forbidden_pages";
 export const Route = [
 
     {
@@ -46,5 +47,10 @@ export const Route = [
     {
         path:'/provider_navbar',
         element:<Hero/>
+    }
+    ,
+    {
+    path: '*',
+    element: <Invalids/>
     }
 ]
