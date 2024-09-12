@@ -188,7 +188,7 @@ export default function ProviderNavbar() {
                                 hover:bg-green-500 transition-transform hover:text-white duration-1000 ease-in-out">
                                 Sign in
                             </button>
-                            <button onClick={() => navigate('/register')}
+                            <button onClick={() => navigate('/login')}
                                     className="lg:p-[8px] text-xl font-bold border-[2px] border-black rounded-[4px] bg-green-400">
                                 Add Job
                             </button>
