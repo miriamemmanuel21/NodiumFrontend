@@ -13,7 +13,7 @@ import Job5 from '../../assets/job5.jpeg';
 import SleekSlider from "./sleekSlider";
 
 export default function MidBody() {
-    const navigate = useNavigate
+    const navigate = useNavigate()
     const JobList =()=>{
         const list = [
             [Job1,'Digital Marketer','Jobber-Node','Featured','Lagos, Nigeria','Full Time','30 Days ago','N240,000'],
@@ -23,7 +23,7 @@ export default function MidBody() {
             [Job5,'Erlang Developer','USwitch','Featured','Lagos, Nigeria','Remote','4 Days ago','$8,000']
         ]
         return (
-            <div className={'flex flex-col bg-green-600 gap-7'}>
+            <div className={'flex flex-col bg-green-600 gap-7 pb-[60px]'}>
                 {
                     list.map(([image,job,company,urgency,location,type,posted,amount])=>(
                         <div className={`flex border-1 bg-white px-auto py-[10px] gap-5 w-full md:w-[60vw] md:px-[5vw] transition-transform transform hover:scale-105
@@ -103,7 +103,7 @@ export default function MidBody() {
 
     }
     return (
-        <div className="flex flex-col pt-[60px]">
+        <div className="flex flex-col py-[60px]">
             <div className="flex flex-col justify-center items-center">
                 <p className={'text-2xl md:text-5xl  font-semibold text-green-600'}>
                     Browse Job Category
@@ -112,7 +112,7 @@ export default function MidBody() {
                     Looking for your next career opportunity. Look no further
                 </p>
             </div>
-            <div className={'my-[30px]'}>
+            <div className={'my-[60px]'}>
                 <SleekSlider/>
             </div>
             <div className={'py-[40px] flex flex-col lg:flex-row lg:gap-[5vw] pt-[15vh] justify-center items-center'}>
@@ -149,7 +149,7 @@ export default function MidBody() {
                     </div>
                 </div>
             </div>
-            <div className={'flex bg-green-600 justify-center '}>
+            <div className={'flex bg-green-600 justify-center'}>
                 <JobList/>
             </div>
         </div>

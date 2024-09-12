@@ -4,6 +4,7 @@ import Image from '../../assets/developer.jpeg'
 import {Icon} from "@iconify/react";
 import {toast} from "react-toastify";
 import MidBody from "./provider_hero_bottom";
+import Footer from "./footer";
 export default function Hero(){
     const submit = async (e)=>{
         try{
@@ -89,6 +90,7 @@ export default function Hero(){
                </div>
            </div>
             <MidBody/>
+            <Footer/>
         </div>
     )
 }
