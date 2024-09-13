@@ -74,7 +74,7 @@ export default function ProviderNavbar() {
                                     draggable: true,
                                     progress: undefined,
                                 })
-                            }}>Pages</li>
+                            }}>Profile</li>
                         <li className="py-2 hover:text-green-500 hover:bg-gray-600 pl-[10px] hover:font-bold hover:text-lg"
                             onClick={() => {email?navigate('/contact'):
                                 toast.error("Login first", {
@@ -96,8 +96,8 @@ export default function ProviderNavbar() {
                             Log out
                         </li> :
                         <li className={'py-[5px] text-white list-none mb-[1rem] bg-green-600 text-center text-md font-bold hover:font-bold hover:text-black '}
-                            onClick={() => navigate('/signup')}>
-                            Sign up
+                            onClick={() => navigate('/login')}>
+                            Login
                         </li>
                     }
                 </div>
@@ -150,7 +150,7 @@ export default function ProviderNavbar() {
             ['Home', '/home'],
             ['Browse Jobs', '/jobs'],
             ['Employers', '/employers'],
-            ['Pages', '/pages'],
+            ['Profile', '/profile'],
             ['Contact', '/contact']
         ];
         return (

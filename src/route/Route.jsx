@@ -8,6 +8,7 @@ import WebDashboard from "../Component/WebDashboard/WebDeveloper";
 import Marketing from "../Component/Marketing/Marketing"
 import Hero from '../provider_components/components/ProviderHero'
 import Invalids from "../provider_components/forbidden_pages";
+import ProviderDashboard from "../provider_components/dashboard";
 export const Route = [
 
     {
@@ -47,6 +48,9 @@ export const Route = [
     {
         path:'/provider_navbar',
         element:<Hero/>
+    },{
+        path:'/provider_dashboard',
+        element: <ProviderDashboard/>
     }
     ,
     {

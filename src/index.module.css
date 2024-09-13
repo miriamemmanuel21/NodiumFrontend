@@ -13,3 +13,9 @@
     background-repeat: no-repeat;
     height: 99.9vh;
 }
+.tag:hover{
+    background: linear-gradient(to right,#E6E3EB 50%,#F9F1ED);
+}
+.current{
+    background: linear-gradient(to right,#E6E3EB 50%,#F9F1ED);
+}
