@@ -3010,7 +3010,7 @@ const ProviderBusinessPage = () => {
                                                             backgroundColor: "rgb(24, 26, 27)",
                                                             color: "rgb(232, 230, 227)",
                                                         }}
-                                                     alt={}/>
+                                                     alt={""}/>
                                                 </div>
                                                 <div
                                                     className="notification__content"
@@ -3134,7 +3134,7 @@ const ProviderBusinessPage = () => {
                                                             backgroundColor: "rgb(24, 26, 27)",
                                                             color: "rgb(232, 230, 227)",
                                                         }}
-                                                     alt={}/>
+                                                     alt={""}/>
                                                 </div>
                                                 <div
                                                     className="notification__content"
@@ -3258,7 +3258,7 @@ const ProviderBusinessPage = () => {
                                                             backgroundColor: "rgb(24, 26, 27)",
                                                             color: "rgb(232, 230, 227)",
                                                         }}
-                                                     alt={}/>
+                                                     alt={""}/>
                                                 </div>
                                                 <div
                                                     className="notification__content"
@@ -3416,7 +3416,7 @@ const ProviderBusinessPage = () => {
                                                             backgroundColor: "rgb(24, 26, 27)",
                                                             color: "rgb(232, 230, 227)",
                                                         }}
-                                                     alt={}/>
+                                                     alt={""}/>
                                                 </div>
                                                 <div
                                                     className="notification__content"
@@ -3542,7 +3542,7 @@ const ProviderBusinessPage = () => {
                                                             backgroundColor: "rgb(24, 26, 27)",
                                                             color: "rgb(232, 230, 227)",
                                                         }}
-                                                     alt={}/>
+                                                     alt={""}/>
                                                 </div>
                                                 <div
                                                     className="notification__content"
@@ -3685,7 +3685,7 @@ const ProviderBusinessPage = () => {
                                                 color: "rgb(232, 230, 227)",
                                                 borderRadius: "2rem",
                                             }}
-                                         alt={}/>
+                                         alt={""}/>
                                     </div>
                                     <div
                                         className="user__name d-none d-xl-block"
