@@ -5,8 +5,9 @@ import AboutUs from "../Component/AboutUs/aboutus";
 import Profile from "../Component/Profile/profile";
 import CustomerSupport from "../Component/CustomerSupport/CustomerSurport";
 import WebDashboard from "../Component/WebDashboard/WebDeveloper";
-import Marketing from "../Component/Marketing/Marketing"
-import Hero from '../provider_components/components/ProviderHero'
+import Marketing from "../Component/Marketing/Marketing";
+import Hero from '../provider_components/components/ProviderHero';
+import CustomerDashboard from "../Component/DashBoard/CustomerDashboard";
 import Invalids from "../provider_components/forbidden_pages";
 import ProviderDashboard from "../provider_components/dashboard_components/dashboard";
 import ProviderProfile from "../provider_components/profile/profile";
@@ -56,6 +57,11 @@ export const Route = [
     {
         path:'/provider_profile',
         element: <ProviderProfile/>
+    }
+    ,
+    {
+        path: '/customer_dashboard',
+        element: <CustomerDashboard/>
     }
     ,
     {
