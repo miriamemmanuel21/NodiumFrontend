@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/provider_components/dashboard_components/recentNotifications.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/components/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/dashboard_components/dashboard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/provider_components/dashboard_components/application_overview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/dashboard_components/application_overview.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/provider_components/dashboard_components/dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/dashboard_components/dashboard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/route/Route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/Route.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\DELL\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -145,6 +143,8 @@
       <workItem from="1726226890701" duration="3086000" />
       <workItem from="1726256794979" duration="8578000" />
       <workItem from="1726558004990" duration="2118000" />
+      <workItem from="1726560380331" duration="3066000" />
+      <workItem from="1726564042827" duration="9989000" />
     </task>
     <servers />
   </component>

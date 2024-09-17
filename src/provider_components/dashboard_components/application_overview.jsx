@@ -1,4 +1,3 @@
-import styles from '../../index.module.css'
 import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 export default function ApplicationOverview() {
@@ -63,38 +62,48 @@ export default function ApplicationOverview() {
         fetchData();
     }, []);
     return (
-        <div>
+        <div className={``}>
             <p className={'mt-[20px] ml-[60px] text-lg'}>Application Overview</p>
-            <div className={`md:grid md:grid-cols-2 md:grid-rows-2 w-[70vw] pt-[10px] gap-4 h-[25vw]
-            px-[4vw] justify-between items-center`}>
-                <div className="flex transition-transform bg-white transform hover:scale-110 gap-4 order-1 w-[90%] p-[10px] rounded-xl">
-                    <p className="rounded-lg p-2 flex justify-center items-center bg-gray-200">
-                        <Icon icon="arcticons:jobstreet" width={40} height={40} style={{ color: 'black' }} />
+
+            <div
+                className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 w-[90vw] md:w-[70vw] pt-[10px] gap-4 h-[25vw] px-[4vw] justify-between items-center">
+                <div
+                    className="flex transition-transform bg-white transform hover:scale-110
+                    gap-4 order-1 w-[90%] p-[3px] md:p-[10px] rounded-xl">
+                    <p className="rounded-lg p-[2px] md:p-2 flex justify-center items-center bg-gray-200">
+                        <Icon icon="arcticons:jobstreet" width={40} height={40} style={{color: 'black'}}/>
                     </p>
-                    <div className="px-5 flex flex-col">
-                        <p className={'text-3xl'}>{jobCount}+</p>
-                        <p className="md:text-md lg:text-lg font-thin text-gray-300">Jobs Posted</p>
+                    <div className="px-5 flex justify-between items-center md:flex-col">
+                        <p className="text-3xl">{jobCount}+</p>
+                        <p className="text-sm md:text-md lg:text-lg font-thin text-gray-500 pt-[5%]">Jobs Posted</p>
                     </div>
                 </div>
-                <div className="flex transition-transform bg-white transform hover:scale-110 gap-4 order-1 w-[90%] p-[10px] rounded-xl">
-                    <p className="rounded-lg p-2 flex justify-center items-center bg-gray-200">
-                        <Icon icon="marketeq:job" width={40} height={40} />
+                <div
+                    className="flex transition-transform bg-white transform hover:scale-110
+                    gap-4 order-2 w-[90%] p-[3px] md:p-[10px] rounded-xl">
+                    <p className="rounded-lg p-[2px] md:p-2 flex justify-center items-center bg-gray-200">
+                        <Icon icon="marketeq:job" width={40} height={40}/>
                     </p>
-                    <div className="px-5 flex flex-col">
-                        <p className={'text-3xl'}>{applicationCount}+</p>
-                        <p className="md:text-md lg:text-lg font-thin text-gray-300">Applications</p>
+                    <div className="px-5 flex justify-between items-center md:flex-col">
+                        <p className="text-3xl">{applicationCount}+</p>
+                        <p className="text-sm md:text-md lg:text-lg font-thin text-gray-500 pt-[5%]">Applications</p>
                     </div>
                 </div>
-                <div className="flex transition-transform bg-white transform hover:scale-110 gap-4 order-1 w-[90%] p-[10px] rounded-xl">
-                    <p className="rounded-lg p-2 flex justify-center items-center bg-gray-200">
-                        <Icon icon="material-symbols-light:reviews-outline" width={40} height={40} style={{ color: 'black' }} />
+
+                <div
+                    className="flex transition-transform bg-white transform hover:scale-110 gap-4
+                    order-3 w-[90%] p-[3px] md:p-[10px] rounded-xl">
+                    <p className="rounded-lg p-[2px] md:p-2 flex justify-center items-center bg-gray-200">
+                        <Icon icon="material-symbols-light:reviews-outline" width={40} height={40}
+                              style={{color: 'black'}}/>
                     </p>
-                    <div className="px-5 flex flex-col">
-                        <p className={'text-3xl'}>{reviewCount}+</p>
-                        <p className="md:text-md lg:text-lg font-thin text-gray-300">Reviews</p>
+                    <div className="px-5 flex justify-between items-center md:flex-col">
+                        <p className="text-3xl">{reviewCount}+</p>
+                        <p className="text-sm md:text-md lg:text-lg font-thin text-gray-500 pt-[5%]">Reviews</p>
                     </div>
                 </div>
             </div>
+
         </div>
-);
+    );
 }
