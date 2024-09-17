@@ -32,7 +32,7 @@ export default function RecentNotifications() {
     }, [url]);
 
     return (
-        <div className={'bg-white flex flex-col mx-[5%] rounded-lg transition-transform hover:scale-105'}>
+        <div className={'bg-white flex flex-col md:mx-[5%] rounded-lg transition-transform hover:scale-105'}>
             <p className={`text-center font-bold text-2xl p-[10px]`}>Recent Notifications</p>
             <p>
                 {notifications.length > 0 ? (

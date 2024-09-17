@@ -9,10 +9,10 @@ export default function ProviderDashboard(){
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className={`flex flex-col ${styles.current}`}>
+        <div className={`flex flex-col `}>
             <ProviderNavbar/>
-            <div className={``}>
-                <div className={`flex md:hidden `}>
+            <div className={`${styles.current}`}>
+                <div className={`flex flex-col md:hidden pl-[4%]`}>
                     <Hamburger toggle={setMenuOpen} toggled={menuOpen}/>
                     {
                         menuOpen?
@@ -21,11 +21,10 @@ export default function ProviderDashboard(){
                                 <Layout props={0}/>
                             </div>
                     :
-                    <div>
-                        <p className={'p-3 text-2xl hidden md:flex'}>Application overview</p>
+                    <div className={'md:flex flex-col hidden'}>
+                        <p className={'p-3 text-2xl'}>Application overview</p>
                         <ApplicationOverview/>
                         <RecentNotifications/>
-
                     </div>
                     }
                 </div>

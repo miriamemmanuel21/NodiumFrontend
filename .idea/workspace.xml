@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/provider_components/dashboard_components/recentNotifications.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider_components/components/Switch.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/provider_components/profile/profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/dashboard_components/application_overview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/dashboard_components/application_overview.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Profile/ProviderProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Profile/profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/provider_components/dashboard_components/dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/dashboard_components/dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/provider_components/dashboard_components/recentNotifications.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/dashboard_components/recentNotifications.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/Route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/Route.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +81,8 @@
       <recent name="C:\Users\oladi\WebstormProjects\NodiumFrontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\provider_components" />
       <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\provider_components\components" />
+      <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\provider_components" />
     </key>
   </component>
   <component name="RunManager">
@@ -144,7 +147,7 @@
       <workItem from="1726256794979" duration="8578000" />
       <workItem from="1726558004990" duration="2118000" />
       <workItem from="1726560380331" duration="3066000" />
-      <workItem from="1726564042827" duration="9989000" />
+      <workItem from="1726564042827" duration="22309000" />
     </task>
     <servers />
   </component>

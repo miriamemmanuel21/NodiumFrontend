@@ -2,13 +2,14 @@ import Layout from "../layout/Layout";
 import SignUp from "../Component/Aurthentication/SignUp";
 import Login from "../Component/Aurthentication/Login";
 import AboutUs from "../Component/AboutUs/aboutus";
-import Profile from "../Component/Profile/ProviderProfile";
+import Profile from "../Component/Profile/profile";
 import CustomerSupport from "../Component/CustomerSupport/CustomerSurport";
 import WebDashboard from "../Component/WebDashboard/WebDeveloper";
 import Marketing from "../Component/Marketing/Marketing"
 import Hero from '../provider_components/components/ProviderHero'
 import Invalids from "../provider_components/forbidden_pages";
 import ProviderDashboard from "../provider_components/dashboard_components/dashboard";
+import ProviderProfile from "../provider_components/profile/profile";
 export const Route = [
 
     {
@@ -51,6 +52,10 @@ export const Route = [
     },{
         path:'/provider_dashboard',
         element: <ProviderDashboard/>
+    },
+    {
+        path:'/provider_profile',
+        element: <ProviderProfile/>
     }
     ,
     {
