@@ -1,48 +1,100 @@
-import Icon from '@iconify/react'
-export default function ApplicationOverview({props}){
-    const [notification, applications,reviews ] = props;
-    const getJobs= async ()=>{
-        return await fetch(`${notification}`,{
-                method :'GET',
-                headers:{
-                    'Content-Type': 'Application/json'
-                }
-            })
-    }
-    const getApplication= async ()=>{
-         return   await fetch(`${applications}`,{
-                method :'GET',
-                headers:{
-                    'Content-Type': 'Application/json'
-                }
-            })
-    }
-    const getReviews= async () =>{
-        return await fetch(`${reviews}`, {
-            method:'GET',
-            headers:{
-                'Content-Type':'application/json'
-            }
-        })
-    }
-    const overview =[
-        [<Icon icon="arcticons:jobstreet" width="1.2rem" height="1.2rem"  style={{color: 'black'}} />,getJobs()],
-        [<Icon icon="marketeq:job" width="1.2rem" height="1.2rem" />,getApplication()],
-        [<Icon icon="material-symbols-light:reviews-outline" width="1.2rem" height="1.2rem"  style={{color: 'black'}}/>,getReviews()]
-    ]
+import styles from '../../index.module.css'
+import React, { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
+export default function ApplicationOverview() {
+    const [jobCount, setJobCount] = useState(0);
+    const [applicationCount, setApplicationCount] = useState(0);
+    const [reviewCount, setReviewCount] = useState(0);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const notificationEndpoint = '';
+    const applicationsEndpoint = '';
+    const reviewsEndpoint = '';
+
+    const getJobs = async () => {
+        try {
+            const response = await fetch(notificationEndpoint, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            const data = await response.json();
+            setJobCount(data?.response?.length || 0);
+        } catch (err) {
+            setError(err);
+        }
+    };
+    const getApplications = async () => {
+        try {
+            const response = await fetch(applicationsEndpoint, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            const data = await response.json();
+            setApplicationCount(data?.response?.length || 0);
+        } catch (err) {
+            setError(err);
+        }
+    };
+    const getReviews = async () => {
+        try {
+            const response = await fetch(reviewsEndpoint, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            const data = await response.json();
+            setReviewCount(data?.response?.length || 0);
+        } catch (err) {
+            setError(err);
+        }
+    };
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            await Promise.all([getJobs(), getApplications(), getReviews()]);
+            setLoading(false);
+        };
+        fetchData();
+    }, []);
     return (
         <div>
-            {
-                overview.map(([icon,response],index)=>(
-                    <div>
-                        <p>{icon}</p>
-                        <span>
-                            <p>{response.data.data}</p>
-                            <p>{index=== 0?}</p>
-                        </span>
+            <p className={'mt-[20px] ml-[60px] text-lg'}>Application Overview</p>
+            <div className={`md:grid md:grid-cols-2 md:grid-rows-2 w-[70vw] pt-[10px] gap-4 h-[25vw]
+            px-[4vw] justify-between items-center`}>
+                <div className="flex transition-transform bg-white transform hover:scale-110 gap-4 order-1 w-[90%] p-[10px] rounded-xl">
+                    <p className="rounded-lg p-2 flex justify-center items-center bg-gray-200">
+                        <Icon icon="arcticons:jobstreet" width={40} height={40} style={{ color: 'black' }} />
+                    </p>
+                    <div className="px-5 flex flex-col">
+                        <p className={'text-3xl'}>{jobCount}+</p>
+                        <p className="md:text-md lg:text-lg font-thin text-gray-300">Jobs Posted</p>
                     </div>
-                ))
-            }
+                </div>
+                <div className="flex transition-transform bg-white transform hover:scale-110 gap-4 order-1 w-[90%] p-[10px] rounded-xl">
+                    <p className="rounded-lg p-2 flex justify-center items-center bg-gray-200">
+                        <Icon icon="marketeq:job" width={40} height={40} />
+                    </p>
+                    <div className="px-5 flex flex-col">
+                        <p className={'text-3xl'}>{applicationCount}+</p>
+                        <p className="md:text-md lg:text-lg font-thin text-gray-300">Applications</p>
+                    </div>
+                </div>
+                <div className="flex transition-transform bg-white transform hover:scale-110 gap-4 order-1 w-[90%] p-[10px] rounded-xl">
+                    <p className="rounded-lg p-2 flex justify-center items-center bg-gray-200">
+                        <Icon icon="material-symbols-light:reviews-outline" width={40} height={40} style={{ color: 'black' }} />
+                    </p>
+                    <div className="px-5 flex flex-col">
+                        <p className={'text-3xl'}>{reviewCount}+</p>
+                        <p className="md:text-md lg:text-lg font-thin text-gray-300">Reviews</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    )
+);
 }
