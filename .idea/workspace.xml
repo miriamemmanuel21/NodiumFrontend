@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/DashBoard/CustomerDashboard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/components/ProviderHero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/ProviderHero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/CompanyProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/DashBoard/CompanyProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/CustomerDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/DashBoard/CustomerDashboard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/route/Route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/Route.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,35 +45,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Node.js.App.js.executor": "Run",
-    "Node.js.CustomerDashboard.jsx.executor": "Run",
-    "Node.js.ProviderBusinessPage.html.executor": "Run",
-    "Node.js.ProviderBusinessPage.jsx.executor": "Run",
-    "Node.js.forbidden_pages.jsx.executor": "Run",
-    "Node.js.index.jsx.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "David",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/DELL/front-ends/NodiumFrontend/src/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Program Files/nodejs/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Users\\DELL\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.CustomerDashboard.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.ProviderBusinessPage.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.ProviderBusinessPage.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.forbidden_pages.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;David&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/front-ends/NodiumFrontend/src/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Program Files/nodejs/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\DELL\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\assets" />

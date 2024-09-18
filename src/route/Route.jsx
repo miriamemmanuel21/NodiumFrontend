@@ -8,6 +8,7 @@ import WebDashboard from "../Component/WebDashboard/WebDeveloper";
 import Marketing from "../Component/Marketing/Marketing";
 import Hero from '../provider_components/components/ProviderHero';
 import CustomerDashboard from "../Component/DashBoard/CustomerDashboard";
+import CompanyProfile from "../Component/DashBoard/CompanyProfile";
 import Invalids from "../provider_components/forbidden_pages";
 export const Route = [
 
@@ -53,6 +54,11 @@ export const Route = [
     {
         path: '/customer_dashboard',
         element: <CustomerDashboard/>
+    }
+    ,
+    {
+        path: '/company_profile',
+        element: <CompanyProfile/>
     }
     ,
     {
