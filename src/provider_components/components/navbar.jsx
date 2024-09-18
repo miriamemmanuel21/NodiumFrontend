@@ -8,10 +8,20 @@ export default function ProviderNavbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const email = localStorage.getItem('email');
+
+    const Overlay = () => {
+        return (
+            <div
+                className={`fixed inset-0 bg-black bg-opacity-40 backdrop-blur-md transition-opacity duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+            ></div>
+        );
+    };
+
     const Display = () => {
         return (
-            <div className="flex flex-col fixed top-0 right-0 w-[300px] h-full bg-gray-100 shadow-lg z-50
-             transform transition-transform duration-500 ease-in-out justify-between">
+            <div className="flex flex-col fixed top-0 left-0 w-[300px] h-full bg-gray-100 shadow-lg z-10
+             transform  duration-500 justify-between inset-0 bg-opacity-50 transition-all
+               ease-in-out backdrop-blur-xl ">
                 <div>
                     <button  className={'hover:pointer p-3 border-black hover:p-[0.6rem] hover:border-2'}>
                         <Icon icon="radix-icons:cross-1"
@@ -64,7 +74,7 @@ export default function ProviderNavbar() {
                                     draggable: true,
                                     progress: undefined,
                                 })
-                            }}>Pages</li>
+                            }}>Profile</li>
                         <li className="py-2 hover:text-green-500 hover:bg-gray-600 pl-[10px] hover:font-bold hover:text-lg"
                             onClick={() => {email?navigate('/contact'):
                                 toast.error("Login first", {
@@ -86,8 +96,8 @@ export default function ProviderNavbar() {
                             Log out
                         </li> :
                         <li className={'py-[5px] text-white list-none mb-[1rem] bg-green-600 text-center text-md font-bold hover:font-bold hover:text-black '}
-                            onClick={() => navigate('/signup')}>
-                            Sign up
+                            onClick={() => navigate('/login')}>
+                            Login
                         </li>
                     }
                 </div>
@@ -130,7 +140,7 @@ export default function ProviderNavbar() {
             });
         }
     };
-    const DisplayPanel =()=>{
+    const   DisplayPanel =()=>{
         return <div>
                    {menuOpen && <Display />}
                </div>
@@ -140,7 +150,7 @@ export default function ProviderNavbar() {
             ['Home', '/home'],
             ['Browse Jobs', '/jobs'],
             ['Employers', '/employers'],
-            ['Pages', '/pages'],
+            ['Profile', '/profile'],
             ['Contact', '/contact']
         ];
         return (
@@ -156,7 +166,7 @@ export default function ProviderNavbar() {
     };
 
     return (
-            <div className={`px-[4vw] flex justify-center bg-white ${menuOpen?'bg':''} py-[1vw]`}>
+            <div className={`px-[4vw] flex justify-center bg-white py-[1vw]`}>
                 <div className="flex flex-grow gap-4">
                     <img src={Image} className="mt-[4px] h-[30px] w-[30px] md:h-[45px] md:w-[45px]"  alt="logo" />
                     <p className="mt-[2vw] sm:mt-[0.5vw] text-md font-bold sm:text-3xl">Nodium</p>
@@ -196,6 +206,7 @@ export default function ProviderNavbar() {
                     )}
                     <div className="lg:hidden flex items-center">
                         <div onClick={() => setMenuOpen(!menuOpen)}>
+                            {menuOpen && <Overlay/>}
                             {menuOpen ? <DisplayPanel/> :
                                 <Hamburger toggle={setMenuOpen} toggled={menuOpen}
                                            onToggle={()=> setMenuOpen(!menuOpen)}/>}
