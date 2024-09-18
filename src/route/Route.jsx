@@ -10,7 +10,7 @@ import Hero from '../provider_components/components/ProviderHero';
 import CustomerDashboard from "../Component/DashBoard/CustomerDashboard";
 import Invalids from "../provider_components/forbidden_pages";
 import ProviderDashboard from "../provider_components/dashboard_components/dashboard";
-import ProviderProfile from "../provider_components/profile/profile";
+import ProviderProfile from "../provider_components/profile/provider_profile";
 export const Route = [
 
     {
