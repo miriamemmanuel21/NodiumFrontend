@@ -28,31 +28,44 @@ const Sidebar = () => (
         <nav>
             <ul>
                 {[
-                    { label: 'Dashboard', icon: 'tachometer-alt' },
-                    { label: 'Company Profile', icon: 'user' },
-                    { label: 'My Job', icon: 'briefcase' },
-                    { label: 'Submit Job', icon: 'upload' },
-                    { label: 'Candidate List', icon: 'list' },
-                    { label: 'Candidate Shortlist', icon: 'check-square' },
-                    { label: 'Message', icon: 'envelope' },
-                    { label: 'Candidate Alerts', icon: 'bell' },
-                    { label: 'Meeting', icon: 'calendar-alt' },
-                    { label: 'Package', icon: 'box' },
-                    { label: 'Change Password', icon: 'key' },
-                    { label: 'Delete Profile', icon: 'trash' },
+                    {label: 'Dashboard', icon: 'tachometer-alt'},
+                    {label: 'Company Profile', icon: 'user'},
+                    {label: 'My Job', icon: 'briefcase'},
+                    {label: 'Submit Job', icon: 'upload'},
+                    {label: 'Candidate List', icon: 'list'},
+                    {label: 'Candidate Shortlist', icon: 'check-square'},
+                    {label: 'Message', icon: 'envelope'},
+                    {label: 'Candidate Alerts', icon: 'bell'},
+                    {label: 'Meeting', icon: 'calendar-alt'},
+                    {label: 'Package', icon: 'box'},
+                    {label: 'Change Password', icon: 'key'},
+                    {label: 'Delete Profile', icon: 'trash'},
                 ].map((item, index) => (
-                    <li key={index} className="mb-4">
-                        <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
-                            <i className={`fas fa-${item.icon} mr-2`} />
-                            {item.label}
-                        </a>
-                    </li>
+                    <div key={index}
+                         className="bg-white p-4 rounded shadow mb-4 hover:bg-gray-100 hover:shadow-lg transition-transform">
+                        <li className="mb-4">
+                            <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
+                                <i className={`fas fa-${item.icon} mr-2`}/>
+                                {item.label}
+                            </a>
+                        </li>
+                    </div>
                 ))}
             </ul>
         </nav>
-        <div className="mt-auto">
-            <img src="https://placehold.co/100x100" alt="Illustration" className="mb-4" />
-            <button className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Logout</button>
+        <div style={{marginTop: 'auto', marginBottom: '20px'}}>
+            <div className="bg-white p-4 rounded shadow mb-4 hover:bg-gray-100 hover:shadow-lg transition-transform">
+                <li className="mb-4">
+                    <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
+                        <i className="fas fa-calendar-alt mr-2"/>
+                        Meeting
+                    </a>
+                </li>
+            </div>
+            <div className="mt-auto">
+                <img src="https://placehold.co/100x100" alt="Illustration" className="mb-4"/>
+                <button className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Logout</button>
+            </div>
         </div>
     </div>
 );
@@ -60,17 +73,17 @@ const Sidebar = () => (
 const Header = () => (
     <header className="bg-white p-4 flex justify-between items-center shadow w-full">
         <div className="flex items-center space-x-2">
-            <img src="https://placehold.co/40x40" alt="JobPath Logo" className="mr-2" />
+            <img src="https://placehold.co/40x40" alt="JobPath Logo" className="mr-2"/>
             <span className="text-2xl font-bold text-green-600">Nodium</span>
         </div>
         <nav className="flex space-x-4">
             {[
-                { label: 'Home' },
-                { label: 'Browse Jobs' },
-                { label: 'Employers' },
-                { label: 'Candidates' },
-                { label: 'Pages' },
-                { label: 'Contact' },
+                {label: 'Home'},
+                {label: 'Browse Jobs'},
+                {label: 'Employers'},
+                {label: 'Candidates'},
+                {label: 'Pages'},
+                {label: 'Contact'},
             ].map((item, index) => (
                 <a key={index} href="#" className="text-gray-700 hover:text-green-600">
                     {item.label}

@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="" />
-=======
     <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/provider_components/profile/my_details.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/components/Switch.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/components/dashboardLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/dashboardLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/provider_components/profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/profile/provider_profile.jsx" afterDir="false" />
-=======
       <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Component/DashBoard/CustomerDashboard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -25,10 +13,8 @@
       <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/provider_components/components/ProviderHero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/components/ProviderHero.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" afterDir="false" />
->>>>>>> a23521aadc6f75c59db4721b08e449be23efcf9d
       <change beforePath="$PROJECT_DIR$/src/route/Route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/Route.jsx" afterDir="false" />
     </list>
->>>>>>> Abbey
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,87 +39,40 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 4
-}</component>
+    "customColor": "",
+    "associatedIndex": 4
+    }</component>
   <component name="ProjectId" id="2kYvGX1Nwj1GAT4Mv6ewZAoSUAN" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> Abbey
   <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.ProviderBusinessPage.html.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.ProviderBusinessPage.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.index.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-<<<<<<< HEAD
-    &quot;git-widget-placeholder&quot;: &quot;David&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/front-ends/NodiumFrontend/src/assets&quot;,
-=======
-    &quot;git-widget-placeholder&quot;: &quot;Abbey&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/front-ends/NodiumFrontend&quot;,
->>>>>>> Abbey
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-<<<<<<< HEAD
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\DELL\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Node.js.App.js.executor": "Run",
-    "Node.js.CustomerDashboard.jsx.executor": "Run",
     "Node.js.ProviderBusinessPage.html.executor": "Run",
     "Node.js.ProviderBusinessPage.jsx.executor": "Run",
-    "Node.js.forbidden_pages.jsx.executor": "Run",
     "Node.js.index.jsx.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "David",
+    "git-widget-placeholder": "Abbey",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/DELL/front-ends/NodiumFrontend/src/assets",
+    "last_opened_file_path": "C:/Users/DELL/front-ends/NodiumFrontend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Program Files/nodejs/node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Users\\DELL\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
->>>>>>> a23521aadc6f75c59db4721b08e449be23efcf9d
->>>>>>> Abbey
-  }
-}</component>
+    }
+    }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\assets" />
@@ -194,30 +133,21 @@
       <workItem from="1726042420007" duration="2719000" />
       <workItem from="1726045488145" duration="22000" />
       <workItem from="1726146705351" duration="7852000" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <workItem from="1726183768143" duration="5156000" />
       <workItem from="1726226890701" duration="3086000" />
       <workItem from="1726256794979" duration="8578000" />
       <workItem from="1726558004990" duration="2118000" />
       <workItem from="1726560380331" duration="3066000" />
       <workItem from="1726564042827" duration="23947000" />
-=======
       <workItem from="1726226851704" duration="8498000" />
       <workItem from="1726513845141" duration="8066000" />
       <workItem from="1726559753480" duration="19169000" />
->>>>>>> a23521aadc6f75c59db4721b08e449be23efcf9d
->>>>>>> Abbey
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -228,11 +158,10 @@
         </entry>
       </map>
     </option>
-=======
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
->>>>>>> Abbey
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -243,7 +172,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
->>>>>>> a23521aadc6f75c59db4721b08e449be23efcf9d
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
