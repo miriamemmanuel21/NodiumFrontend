@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import styles from '../index.module.css';
 
 function Invalids() {
