@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Icon } from "@iconify/react";
 import Chart from 'chart.js/auto';
 import { CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
@@ -73,7 +74,7 @@ const Sidebar = () => (
 const Header = () => (
     <header className="bg-white p-4 flex justify-between items-center shadow w-full">
         <div className="flex items-center space-x-2">
-            <img src="https://placehold.co/40x40" alt="JobPath Logo" className="mr-2"/>
+            <img src="https://placehold.co/40x40" alt="Nodium Logo" className="mr-2"/>
             <span className="text-2xl font-bold text-green-600">Nodium</span>
         </div>
         <nav className="flex space-x-4">
