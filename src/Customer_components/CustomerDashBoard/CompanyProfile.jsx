@@ -218,6 +218,7 @@ const Member = () => (
                         <label htmlFor="experience" className="mr-2">Experience</label>
                         <select id="experience" className="w-full border rounded p-2">
                             <option value="1 Year">1 Year</option>
+                            <option value="2 Years">2 Years</option>
                             {/* Add other options as needed */}
                         </select>
                     </div>

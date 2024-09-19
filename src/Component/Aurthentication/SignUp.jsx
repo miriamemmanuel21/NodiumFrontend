@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import ServiceProvider from '../DashBoard/ServiceProvider';
-import Customer from '../DashBoard/Customer';
+import ServiceProvider from '../../Customer_components/CustomerDashBoard/ServiceProvider';
+import Customer from '../../Customer_components/CustomerDashBoard/Customer';
 
 const SignupForm = () => {
     const [formData, setFormData] = useState({
