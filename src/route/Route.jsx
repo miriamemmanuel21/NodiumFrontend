@@ -11,6 +11,8 @@ import CustomerDashboard from "../Component/DashBoard/CustomerDashboard";
 import Invalids from '../provider_components/forbidden_pages'
 import ProviderDashboard from "../provider_components/dashboard_components/dashboard";
 import ProviderProfile from "../provider_components/profile/provider_profile";
+import Resume from "../provider_components/resume/my_resume";
+import AppliedJobs from "../provider_components/applications/applications";
 export const Route = [
 
     {
@@ -62,6 +64,14 @@ export const Route = [
     {
         path: '/customer_dashboard',
         element: <CustomerDashboard/>
+    },
+    {
+        path:'/provider_resume',
+        element: <Resume/>
+    },
+    {
+        path: '/applied_jobs',
+        element: <AppliedJobs/>
     }
     ,
     {

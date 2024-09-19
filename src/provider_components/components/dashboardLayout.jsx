@@ -9,8 +9,8 @@ export default function Layout({props}){
     const contents = [
         [<Icon icon="iwwa:dashboard" width={30} height={30}  style={{color: 'black'}} />,'/provider_dashboard','Dashboard',0],
         [<Icon icon="streamline:user-profile-focus" width={30} height={30}  style={{color: 'black'}} />,'/provider_profile','Profile',1],
-        [<Icon icon="fluent:notepad-person-24-regular" width={30} height={30}  style={{color: 'black'}} />,'/resume','My Resume',2],
-        [<Icon icon="fluent-emoji-high-contrast:man-construction-worker" width={30} height={30}  style={{color: 'black'}} />,'','Applied Job',3],
+        [<Icon icon="fluent:notepad-person-24-regular" width={30} height={30}  style={{color: 'black'}} />,'/provider_resume','My Resume',2],
+        [<Icon icon="fluent-emoji-high-contrast:man-construction-worker" width={30} height={30}  style={{color: 'black'}} />,'/applied_jobs','Applied Job',3],
         [<Icon icon="el:list-alt" width={30} height={30}  style={{color: 'black'}} />,'','Jobs Shortlist',4],
         [<Icon icon="hugeicons:message-edit-02" width={30} height={30}  style={{color: 'black'}} />,'','Message',5],
         [<Icon icon="fluent:mail-alert-28-regular" width={30} height={30}  style={{color: 'black'}} />,'','Job Alerts',6],
