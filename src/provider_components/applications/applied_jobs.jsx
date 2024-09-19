@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import {toast, ToastContainer} from "react-toastify";
-import { Icon } from "@iconify/react";
+import {useEffect, useState} from "react";
+import {ToastContainer} from "react-toastify";
+import {Icon} from "@iconify/react";
 
 export default function AppliedJobsContents() {
     const [jobs, setJobs] = useState([]);
@@ -15,15 +15,8 @@ export default function AppliedJobsContents() {
                     'Content-Type': "application/json"
                 }
             });
-            const data = await response.json();
-            return data;
+            return await response.json();
         } catch (error) {
-            // toast.error('An error occurred', {
-            //     autoClose: 5000,
-            //     progress: undefined,
-            //     theme: 'dark',
-            //     pauseOnHover: true
-            // });
             return null;
         }
     };
