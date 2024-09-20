@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.github/workflows/secripts.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Aurthentication/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Aurthentication/Login.jsx" afterDir="false" />
@@ -12,6 +13,16 @@
       <change beforePath="$PROJECT_DIR$/src/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/provider_components/applications/applied_jobs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/applications/applied_jobs.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/provider_components/forbidden_pages.jsx" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/CompanyProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/CompanyProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/Customer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/Customer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/CustomerDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/CustomerDashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/ServiceProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/ServiceProvider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/Route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/Route.jsx" afterDir="false" />
+>>>>>>> 4d9395d8e2976fbdc0c2829045eda0f79eb964f8
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +47,17 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
     &quot;customColor&quot;: &quot;&quot;,
     &quot;associatedIndex&quot;: 4
     }</component>
   <component name="ProjectId" id="2kYvGX1Nwj1GAT4Mv6ewZAoSUAN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,7 +72,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
     "git-widget-placeholder": "master",
+=======
+    "git-widget-placeholder": "David",
+>>>>>>> 4d9395d8e2976fbdc0c2829045eda0f79eb964f8
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/DELL/front-ends/NodiumFrontend",
     "node.js.detected.package.eslint": "true",
@@ -82,7 +102,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="ProviderBusinessPage.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" working-dir="$PROJECT_DIR$/src/Component/DashBoard">
+    <configuration name="ProviderBusinessPage.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" working-dir="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard">
       <method v="2" />
     </configuration>
     <recent_temporary>
