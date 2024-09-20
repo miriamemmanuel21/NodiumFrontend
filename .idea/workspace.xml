@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="282b5d2d-103f-49e6-a252-53ef58d68867" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/ApplicationOverview.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/ProfileView.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/RecentApplicants.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/RecentNotification.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/SIdebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Aurthentication/SignUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/CompanyProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/CompanyProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/Customer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/Customer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/CustomerDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/CustomerDashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/ProviderBusinessPage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/DashBoard/ServiceProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/ServiceProvider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/CompanyProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/ComapnyProfile/CompanyProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/CustomerDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_components/CustomerDashBoard/CustomerDashboard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/route/Route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/Route.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +71,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.eslint": "",
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -84,6 +87,8 @@
       <recent name="C:\Users\oladi\WebstormProjects\NodiumFrontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\oladi\WebstormProjects\NodiumFrontend\src\Customer_components" />
+      <recent name="C:\Users\oladi\WebstormProjects\NodiumFrontend\src\Customer_components\CustomerDashBoard\ComapnyProfile" />
       <recent name="C:\Users\DELL\front-ends\NodiumFrontend\src\provider_components\components" />
     </key>
   </component>
@@ -146,6 +151,7 @@
       <workItem from="1726226851704" duration="8498000" />
       <workItem from="1726513845141" duration="8066000" />
       <workItem from="1726559753480" duration="19169000" />
+      <workItem from="1726818567446" duration="3990000" />
     </task>
     <servers />
   </component>
