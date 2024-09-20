@@ -11,7 +11,6 @@ const OTPPage = ({ onBackToLogin }) => {
             const countdown = setInterval(() => {
                 setTimer((prevTimer) => prevTimer - 1);
             }, 1000);
-
             return () => clearInterval(countdown);
         }
     }, [timer]);

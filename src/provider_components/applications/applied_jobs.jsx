@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
 import {ToastContainer} from "react-toastify";
 import {Icon} from "@iconify/react";
-
 export default function AppliedJobsContents() {
     const [jobs, setJobs] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -34,7 +33,7 @@ export default function AppliedJobsContents() {
 
     return (
         <div className={`bg-white m-[5%]`}>
-            <p className={`text-sm md:text-lg font-medium md:font-bold p-[1%] bg-gray-400 rounded`}>Applied Jobs</p>
+            <p className={`text-sm md:text-lg font-medium md:font-bold p-[1%] bg-[#C1C1C1] rounded`}>Applied Jobs</p>
             {loading ? (
                 <div>Loading...</div>
             ) : jobs && jobs.length > 0 ? (
