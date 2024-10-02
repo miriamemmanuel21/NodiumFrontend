@@ -2,10 +2,10 @@ import React from "react";
 import ladyworking from "../../assets/ladyworking.png";  
 import manworking from "../../assets/manworking.png";  
 import lady2working from "../../assets/lady2working.png";  
-// import manworking2 from "../../assets/manworking.png"; 
 import joy from "../../assets/joy.png";
 import victor from "../../assets/victor.png";
 import bob from "../../assets/bob.png"
+import styles from '../../index.module.css'
 
 const WebDeveloper = [  
   {  
@@ -66,7 +66,7 @@ const WebDeveloper = [
 
 const ServiceProviders = () => {  
   return (  
-    <div className="container mx-auto p-4">  
+    <div className={`container mx-auto p-4 ${styles.slideIn}`}>
       <h1 className="text-2xl font-bold mb-6">Service Provider Dashboard</h1>  
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">  
         {WebDeveloper.map((provider) => (  

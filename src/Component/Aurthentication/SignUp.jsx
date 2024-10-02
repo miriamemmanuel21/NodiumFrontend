@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import { Icon } from '@iconify/react';
-import { toast,ToastContainer } from 'react-toastify';
-import {useNavigate} from "react-router-dom";
-import styles from '../../index.module.css'
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
+import styles from '../../index.module.css';
 
-export default function SignupForm (){
+
+export default function SignupForm() {
+    const baseURL = "http://localhost:8080";
+    localStorage.setItem("base_url",baseURL);
+
     let userSchema = Yup.object().shape({
         email: Yup.string()
             .email('Invalid email')
@@ -27,100 +32,172 @@ export default function SignupForm (){
             .matches(/^[a-zA-Z]{2,}/, 'Invalid lastname provided')
             .required('Last name is required'),
     });
+
+    let result;
     const Navigate = useNavigate();
     const [isClicked, setClicked] = useState(false);
     const [userRole, setUserRole] = useState('');
-    const [error, setError] = useState('');
-    const [color, setColor] = useState('#1dbf73');
-    const [passwordVisible, setPasswordVisible] = useState(false);
+    const [initial_values, setInitialValue] = useState({
+        email: '',
+        password: '',
+        confirmPassword: '',
+        firstname: '',
+        lastname: '',
+        role: '',
+    });
 
     const handleSubmit = async (values) => {
+        setClicked(true);
+        setInitialValue(values);
+
         try {
+            const data = JSON.stringify({
+                email: values.email,
+                password: values.password,
+                firstname: values.firstname,
+                lastname: values.lastname,
+            });
+            console.log(data);
             const response = await fetch(
-                `http://localhost:8080/api/v1/nodium/${userRole === 'Service Provider' ? 'providers' : 'users'}/register`,
+                userRole === 'Service Provider' ?
+                    `${baseURL}/api/v1/nodium/providers/register` :
+                    `${baseURL}/api/v1/nodium/users/register`,
                 {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(values),
+                    body: data,
                 }
             );
-            console.log(response);
-            if (response.status === 200) {
-                toast.success('Registration Successful',{
-                    position:"top-center",
-                    autoClose:5000,
-                    isLoading:true,
-                    pauseOnHover:true,
-                    theme:"dark"
-                });
-                values.role==='Service Provider'? Navigate('/provider_dashboard ') : Navigate('/webdeveloper');
+
+            result = await response.json();
+            let login;
+            if (response.ok) {
+                console.log("About want to login")
+                try {
+                    console.log(result.data.email,);
+                    login = await fetch(
+                        `${baseURL}/api/v1/auth/login`, {
+                            method: 'POST',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({email: values.email, password:
+                                values.password})
+                        }
+                    );
+                    login = await login.json();
+                    console.log(login.data.token)
+                    const token = login.data.token;
+                    localStorage.setItem('token', token);
+                    localStorage.setItem('firstname', result.data.firstname);
+                    localStorage.setItem('lastname', result.data.lastname);
+                    localStorage.setItem('email', result.data.email);
+                    localStorage.setItem('role ', login.data.role);
+                    localStorage.setItem('id', result.data.id);
+                    console.log("persisted user detail successfully")
+                    toast.success(`Welcome ${result.data.lastname}`, {
+                        position: "top-center",
+                        autoClose: 5000,
+                        pauseOnHover: true,
+                        theme: "dark",
+                    });
+                    setTimeout(() => {
+                            Navigate(login.data.role === "PROVIDER" ? '/provider_dashboard' : '/customer_dashboard')
+                        }, 5000);
+                    console.log(localStorage.getItem('role'))
+                    console.log(localStorage.getItem('email'))
+                    console.log(localStorage.getItem('lastname'))
+                    console.log(localStorage.getItem('firstname'))
+                    console.log(localStorage.getItem('id'))
+                    console.log(localStorage.getItem('token'))
+                }
+                catch (error) {
+                    throw new Error(result.Error || "Login failed");
+                }
+            } else {
+                console.log("login response is",login)
+                throw new Error(result.Error);
             }
-        } catch (error) {
-            setError('Error submitting form: ' + error.message);
+        }
+        catch (err) {
+            console.error("Error: ", err.message);
+            toast.error(`Something went wrong.Try Logging in again`, {
+                theme: 'dark',
+                autoClose: 5000,
+                pauseOnHover: true,
+            });
             setClicked(false);
         }
+        finally {
+            setClicked(false);
+            setInitialValue({
+                password: '',
+                confirmPassword: '',
+                firstname: '',
+                lastname: '',
+            })
+        }
     };
-
     return (
-        <div className={`py-20 bg-[#F3F4F6] ${styles.slider}`}>
-            <div className="flex justify-center items-center h-screen bg-gray-100 lg:py-20 ">
+        <div className={`py-20 bg-[#F3F4F6] ${styles.slideIn}`}>
+            <div className="flex justify-center items-center h-screen bg-gray-100 lg:py-20">
                 <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
-                    <h1 className="text-2xl font-bold text-center mb-2 text-green-500" >
+                    <h1 className="text-2xl font-bold text-center mb-2 text-green-500">
                         Nodium
                     </h1>
-                    <h2 className="text-2xl font-bold text-center mb-4">Sign Up</h2>
+                    <h2 className="text-xl font-bold text-center mb-3">Sign Up</h2>
                     <Formik
-                        initialValues={{
-                            email: '',password: '',confirmPassword: '',
-                            firstname: '',lastname: '', role: '',
-                        }}
+                        initialValues={initial_values}
                         validationSchema={userSchema}
-                        onSubmit={handleSubmit}
-                    >
+                        onSubmit={handleSubmit}>
                         {({
-                              values,
                               errors,
                               touched,
                               handleChange,
-                              handleBlur,
+                              values,
+                              isValid,
+                              handleSubmit,
                           }) => (
-                            <Form>
-                                <div className="mb-4">
-                                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstname">
+                            <Form onSubmit={(e) => {
+                                e.preventDefault();
+                                if (isValid) {
+                                    handleSubmit()
+                                }
+                            }}>
+                                <div className="mb-3">
+                                    <label className="block text-gray-700 text-xs font-bold mb-2" htmlFor="firstname">
                                         First Name
                                     </label>
                                     <Field
                                         type="text"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
+                                        values={initial_values.firstname}
                                         name="firstname"
                                         placeholder="Enter your first name"
                                         className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         style={{borderColor: errors.firstname && touched.firstname ? 'red' : 'inherit'}}
                                     />
-                                    {errors.firstname && touched.firstname && (<p className={'text-sm'}>{errors.firstname}</p>)}
+                                    {errors.firstname && touched.firstname && (
+                                        <p className="text-sm text-red-500">{errors.firstname}</p>)}
                                 </div>
 
-                                <div className="mb-4">
-                                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastname">
+                                <div className="mb-3">
+                                    <label className="block text-gray-700 text-xs font-bold mb-2" htmlFor="lastname">
                                         Last Name
                                     </label>
                                     <Field
                                         type="text"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
                                         name="lastname"
+                                        values={initial_values.lastname}
                                         placeholder="Enter your last name"
                                         className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         style={{borderColor: errors.lastname && touched.lastname ? 'red' : 'inherit'}}
                                     />
-                                    {errors.lastname && touched.lastname && (<p className={'text-sm'}>{errors.lastname}</p>)}
+                                    {errors.lastname && touched.lastname && (
+                                        <p className="text-sm text-red-500">{errors.lastname}</p>)}
                                 </div>
 
-                                <div className="mb-4">
-                                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                                <div className="mb-3">
+                                    <label className="block text-gray-700 text-xs font-bold mb-2" htmlFor="email">
                                         Email
                                     </label>
                                     <Field
@@ -130,25 +207,27 @@ export default function SignupForm (){
                                         className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         style={{borderColor: errors.email && touched.email ? 'red' : 'inherit'}}
                                     />
-                                    {errors.email && touched.email && (<p className={'text-sm'}>{errors.email}</p>)}
+                                    {errors.email && touched.email && (
+                                        <p className="text-sm text-red-500">{errors.email}</p>)}
                                 </div>
 
-                                <div className="mb-4 relative">
-                                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                                <div className="mb-3">
+                                    <label className="block text-gray-700 text-xs font-bold mb-2" htmlFor="password">
                                         Password
                                     </label>
                                     <Field
-                                        type={passwordVisible ? 'text' : 'password'}
+                                        type='password'
                                         name="password"
                                         placeholder="Enter your password"
                                         className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         style={{borderColor: errors.password && touched.password ? 'red' : 'inherit'}}
                                     />
-                                    {errors.password && touched.password && (<p className={'text-sm'}>{errors.password}</p>)}
+                                    {errors.password && touched.password && (
+                                        <p className="text-sm text-red-500">{errors.password}</p>)}
                                 </div>
 
-                                <div className="mb-4">
-                                    <label className="block text-gray-700 text-sm font-bold mb-2"
+                                <div className="mb-3">
+                                    <label className="block text-gray-700 text-xs font-bold mb-2"
                                            htmlFor="confirmPassword">
                                         Confirm Password
                                     </label>
@@ -160,11 +239,11 @@ export default function SignupForm (){
                                         style={{borderColor: errors.confirmPassword && touched.confirmPassword ? 'red' : 'inherit'}}
                                     />
                                     {errors.confirmPassword && touched.confirmPassword && (
-                                        <p className={'text-sm'}>{errors.confirmPassword}</p>
+                                        <p className="text-xs text-red-500">{errors.confirmPassword}</p>
                                     )}
                                 </div>
 
-                                <div className="mb-1">
+                                <div className="mb-3">
                                     <Field
                                         as="select"
                                         name="role"
@@ -175,7 +254,7 @@ export default function SignupForm (){
                                             setUserRole(e.target.value);
                                         }}
                                     >
-                                        <option value="" disabled hidden>Select what you are signing up as</option>
+                                        <option value="" disabled hidden >Select what you are signing up as</option>
                                         <option value="Service Provider">SERVICE PROVIDER</option>
                                         <option value="Customer">CUSTOMER</option>
                                     </Field>
@@ -184,26 +263,27 @@ export default function SignupForm (){
                                 <div className="flex items-center justify-between w-full">
                                     <button
                                         type="submit"
-                                        className={`${isClicked ? 'py-[10px]' : ''} w-full bg-green-400 text-white font-bold py-2 px-4 rounded-lg
-                                         hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                                        className={`${isClicked ? 'py-[10px] justify-center items-center flex' : ''} w-full bg-green-400 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                                        disabled={!isValid || !isClicked}
                                     >
-                                        {isClicked ? (
-                                            <Icon icon="eos-icons:bubble-loading" width={40} height={40}
+                                        {isClicked && isValid ? (
+                                            <Icon icon="eos-icons:bubble-loading" width={30} height={30}
                                                   style={{color: 'black'}}/>
                                         ) : (
-                                            'Sign Up'
+                                            <p>Sign Up</p>
                                         )}
                                     </button>
                                 </div>
-                                <p onClick={()=>{Navigate('/login')}} className={`pt-4 cursor-pointer text-center ${styles.underline} hover:text-black text-green-500`}>
-                                    Already Have An Account
+                                <p onClick={() => Navigate('/login')}
+                                   className={`pt-4 cursor-pointer text-center ${styles.underline} hover:text-black text-green-500`}>
+                                    Already Have An account
                                 </p>
-                            </Form>
-                        )}
+                            </Form>)
+                        }
                     </Formik>
                     <ToastContainer/>
                 </div>
             </div>
         </div>
-    );
+    )
 }

@@ -1,258 +1,164 @@
-import React, { useState, useEffect } from 'react';
-
-const OTPPage = ({ onBackToLogin }) => {
-    const [otp, setOtp] = useState('');
-    const [timer, setTimer] = useState(60);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
-
-    useEffect(() => {
-        if (timer > 0) {
-            const countdown = setInterval(() => {
-                setTimer((prevTimer) => prevTimer - 1);
-            }, 1000);
-            return () => clearInterval(countdown);
-        }
-    }, [timer]);
-
-    const handleChange = (e) => {
-        setOtp(e.target.value);
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setError('');
-
-        try {
-            const response = await fetch('/api/verify-otp', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ otp }),
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                console.log("OTP verified successfully");
-            } else {
-                setError('Invalid OTP. Please try again.');
-            }
-        } catch (err) {
-            setError('An error occurred. Please try again later.');
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    return (
-        <div className="flex justify-center items-center h-screen bg-transparent">
-            <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold text-center mb-8">Enter OTP</h2>
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="otp">
-                            OTP
-                        </label>
-                        <input
-                            type="text"
-                            id="otp"
-                            name="otp"
-                            value={otp}
-                            onChange={handleChange}
-                            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Enter OTP"
-                            required
-                        />
-                    </div>
-                    <div className="mb-4 text-center text-gray-700">
-                        {timer > 0 ? `Resend OTP in ${timer} seconds` : 'You can now resend OTP'}
-                    </div>
-                    {error && <div className="mb-4 text-red-500 text-center">{error}</div>}
-                    <div className="flex items-center justify-between">
-                        <button
-                            type="submit"
-                            className="w-full bg-[#1dbf73] text-white font-bold py-2 px-4 rounded-lg hover:bg-[#17a864] focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            disabled={loading}
-                        >
-                            {loading ? 'Submitting...' : 'Submit'}
-                        </button>
-                    </div>
-                </form>
-                <div className="mt-4 text-center">
-                    <button
-                        onClick={onBackToLogin}
-                        className="text-blue-500 hover:underline focus:outline-none"
-                        style={{ color: '#1dbf73' }}
-                    >
-                        Back to Login
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
-};
-
-const LoginForm = () => {
-    const [formData, setFormData] = useState({
-        username: '',
-        email: '',
-        password: ''
+import {Field, Form, Formik} from "formik";
+import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import styles from '../../index.module.css';
+import * as Yup from 'yup';
+import {toast, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {Icon} from "@iconify/react";
+export default function LoginComponent(){
+    const [isLoading, setLoading] = useState(false);
+    const navigate = useNavigate();
+    const [isVisible , setVisible] = useState(false);
+    const validator = Yup.object().shape({
+        email: Yup.string()
+            .email('Invalid email')
+            .matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Invalid email format')
+            .required('Email is required'),
+        password: Yup.string()
+            .matches(/^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[,/;!#@%^*&(){}~`])/,
+                'Password must contain letters, numbers, and special characters')
+            .min(8, 'Password must be at least 8 characters long')
+            .required('Password is required')
     });
-
-    const [rememberMe, setRememberMe] = useState(false);
-    const [showOtpPage, setShowOtpPage] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
-    const [color, setColor] = useState('#1dbf73');
-
-    useEffect(() => {
-        const colors = ['#1dbf73', '#17a864'];
-        let index = 0;
-        const interval = setInterval(() => {
-            setColor(colors[index]);
-            index = (index + 1) % colors.length;
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
+    const signUp = () => {
+        navigate('/signUp');
     };
-
-    const handleCheckboxChange = (e) => {
-        setRememberMe(e.target.checked);
+    const forgotPassword = () => {
+        navigate('/otpPage');
     };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const submitForm = async (data, { setSubmitting }) => {
         setLoading(true);
-        setError('');
-
+        console.log()
         try {
-            const encryptedPassword = btoa(formData.password); // Simple Base64 encryption
-            const response = await fetch('/api/login', {
+            const response = await fetch(`http://localhost:8080/api/v1/auth/login`,{
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ ...formData, password: encryptedPassword, rememberMe }),
+                body: JSON.Stringify(data),
+            })
+            let login= await  response.json()
+            console.log(login.data.token)
+            const token = login.data.token;
+            localStorage.setItem('token', token);
+            localStorage.setItem('firstname', login.data.firstname);
+            localStorage.setItem('lastname', login.data.lastname);
+            localStorage.setItem('email', login.data.email);
+            localStorage.setItem('role ', login.data.role);
+            localStorage.setItem('id', login.data.id);
+            console.log("persisted user detail successfully")
+            toast.success(`Welcome ${login.data.lastname}`, {
+                position: "top-center",
+                autoClose: 5000,
+                pauseOnHover: true,
+                theme: "dark",
             });
+            setTimeout(() => {
+                navigate(login.data.role === "PROVIDER" ? '/provider_dashboard' : '/customer_dashboard')
+            }, 5000);
+            console.log(localStorage.getItem('role'))
+            console.log(localStorage.getItem('email'))
+            console.log(localStorage.getItem('lastname'))
+            console.log(localStorage.getItem('firstname'))
+            console.log(localStorage.getItem('id'))
+            console.log(localStorage.getItem('token'))
 
-            const data = await response.json();
-
-            if (data.success) {
-                setShowOtpPage(true);
-            } else {
-                setError('Invalid credentials. Please try again.');
+            if(response.ok) {
+                const { role } = response.json().data;
+                {role === 'PROVIDER'? navigate('/provider_dashboard'): navigate('/web_developer');}
             }
-        } catch (err) {
-            setError('An error occurred. Please try again later.');
-        } finally {
+            else {
+                throw new Error('Something went wrong, please try again.');
+            }
+        } catch (error) {
+            toast.error(error.message, {
+                theme: 'dark',
+                position: 'top-center',
+                autoClose: 5000,
+                pauseOnHover: true,
+            });
+        }
+        finally {
             setLoading(false);
+            setSubmitting(false);
         }
     };
-
-    const handleForgotPassword = () => {
-        setShowOtpPage(true);
-    };
-
-    const handleBackToLogin = () => {
-        setShowOtpPage(false);
-    };
-
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
-
-    if (showOtpPage) {
-        return <OTPPage onBackToLogin={handleBackToLogin} />;
-    }
-
     return (
-        <div className="flex justify-center items-center h-screen" style={{ background: 'url(your-background-image-url) no-repeat center center/cover' }}>
-            <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
-                <h1 className="text-4xl font-bold text-center mb-4" style={{ color: color }}>Nodium</h1>
-                <h2 className="text-2xl font-bold text-center mb-8">Login</h2>
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Enter your email address"
-                            required
-                        />
-                    </div>
-                    <div className="mb-6 relative">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-                            Password
-                        </label>
-                        <input
-                            type={showPassword ? 'text' : 'password'}
-                            id="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Enter your password"
-                            required
-                        />
-                        <span
-                            onClick={togglePasswordVisibility}
-                            className="absolute top-9 right-3 cursor-pointer"
-                        >
-                            {showPassword ? '🙈' : '👁️'}
-                        </span>
-                    </div>
-                    <div className="mb-4">
-                        <label className="flex items-center">
-                            <input
-                                type="checkbox"
-                                name="rememberMe"
-                                checked={rememberMe}
-                                onChange={handleCheckboxChange}
-                                className="mr-2"
-                            />
-                            Remember Me
-                        </label>
-                    </div>
-                    {error && <div className="mb-4 text-red-500 text-center">{error}</div>}
-                    <div className="flex items-center justify-between">
-                        <button
-                            type="submit"
-                            className="w-full bg-[#1dbf73] text-white font-bold py-2 px-4 rounded-lg hover:bg-[#17a864] focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            disabled={loading}
-                        >
-                            {loading ? 'Logging in...' : 'Login'}
-                        </button>
-                    </div>
-                </form>
-                <div className="mt-4 text-center">
-                    <button
-                        onClick={handleForgotPassword}
-                        className="text-blue-500 hover:underline focus:outline-none"
-                        style={{ color: '#1dbf73' }}
-                    >
-                        Forgot Password?
-                    </button>
-                </div>
+        <div className={`${styles.slideIn} w-full  flex flex-col justify-center items-center 
+                        h-screen backdrop-blur-sm bg-opacity-55 bg-green-100`}>
+            <div className={`flex flex-col justify-center items-center drop-shadow-md md:w-[30vw]
+                            border-black border backdrop:drop-shadow-2xl p-[20px] rounded-2xl`}>
+                <p className={`text-green-600 text-[5vw] md:text-[3vw] font-bold`}>Nodium</p>
+                <p>Login</p>
+                <Formik
+                    onSubmit={submitForm}
+                    initialValues={{ email: '', password: '' }}
+                    validationSchema={validator}
+                >
+                    {({ touched, errors, isSubmitting }) => (
+                        <Form className={'flex flex-col'}>
+                            <div className="mb-4">
+                                <p className="block text-gray-700 text-sm font-bold mb-2">Email</p>
+                                <Field
+                                    type="text"
+                                    name="email"
+                                    placeholder="Enter your Email"
+                                    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    style={{borderColor: errors.email && touched.email ? 'red' : 'inherit'}}
+                                />
+                                {errors.email && touched.email && (
+                                    <p className="text-sm text-red-500">{errors.email}</p>
+                                )}
+                            </div>
+                            <div className="mb-4 relative">
+                                <p className="block text-gray-700 text-sm font-bold mb-2">Password</p>
+                                <Field
+                                    type={`${isVisible ? 'text' : 'password'}`}
+                                    name="password"
+                                    placeholder="Enter your Password"
+                                    className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10"
+                                    style={{borderColor: errors.password && touched.password ? 'red' : 'inherit'}}
+                                />
+                                <span onClick={() => {
+                                    setVisible(!isVisible);
+                                }}
+                                      className="absolute right-3 top-[40px] cursor-pointer">
+                                    {isVisible
+                                        ? <Icon icon="carbon:view-off" width="1.2rem" height="1.2rem" style={{color: 'black'}}/>
+                                        : <Icon icon="ep:view" width="1.2rem" height="1.2rem" style={{color: 'black'}}/>}
+                                </span>
+                                {errors.password && touched.password && (
+                                    <div className="w-full flex justify-center items-center">
+                                        <p className="text-xs text-red-500 w-[80%]">{errors.password}</p>
+                                    </div>
+                                )}
+                            </div>
+                            <div className={`justify-center items-center flex flex-col `}>
+                                <button
+                                    type="submit"
+                                    className={`py-[5px] px-[10px] w-[200px] rounded bg-green-300 hover:bg-green-600 mx-[20%] flex justify-center items-center`}
+                                    disabled={isSubmitting || isLoading}>
+                                    {isLoading ? (
+                                        <Icon icon="line-md:loading-alt-loop" width="1.2rem" height="1.2rem"
+                                              style={{color: 'black'}}/>
+                                    ) : (
+                                        'Login'
+                                    )}
+                                </button>
+
+                                <div
+                                    className={`flex flex-col justify-items-between ${styles.text} gap-[1vw] mt-[1vw]`}>
+                                    <p onClick={forgotPassword}>
+                                        forgotten password
+                                    </p>
+                                    <p onClick={signUp}>
+                                        Sign up
+                                    </p>
+                                </div>
+                            </div>
+                        </Form>
+                    )}
+                </Formik>
+                <ToastContainer/>
             </div>
         </div>
     );
-};
-
-export default LoginForm;
+}

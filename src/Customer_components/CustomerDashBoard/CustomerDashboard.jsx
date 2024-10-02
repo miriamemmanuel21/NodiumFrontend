@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { Icon } from "@iconify/react";
 import Chart from 'chart.js/auto';
 import { CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import ProviderNavbar from "../../provider_components/components/navbar";
 
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const CustomerDashboard = () => (
     <div className="flex flex-col h-screen">
         <div className="fixed w-full top-0 left-0 z-10">
-            <Header />
+            <ProviderNavbar/>
         </div>
-        <div className="flex flex-grow overflow-hidden mt-16">
-            <Sidebar />
+        <div className="flex flex-g overflow-hidden mt-16">
+            <div>
+                <Sidebar />
+            </div>
             <main className="flex-grow p-6 overflow-auto">
                 <ApplicationsOverview />
                 <div className="flex space-x-4">

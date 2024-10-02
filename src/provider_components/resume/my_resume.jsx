@@ -1,87 +1,171 @@
-import Layout from '../components/dashboardLayout';
-import ProviderNavbar from '../components/navbar';
-import styles from '../../index.module.css'
-import {useState} from "react";
-import {Icon} from "@iconify/react";
-import {Button} from "@mui/material";
-import {toast} from "react-toastify";
-export default function Resume(){
-    const [selectedFile, setSelectedFile] = useState(null);
-    const [filePreview, setFilePreview] = useState('');
-    const submit = async (e)=>{
-        const userId = localStorage.getItem('userId');
-        await fetch(`https://localhost:8080/nodium/upload/${userId}/${selectedFile}`,{
-            method:'POST',
-            headers: {
-                contentType:'application/json',
-                Authorization : `Bearer ${localStorage.getItem('token')}`
-            }
-        })
-    }
-    const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        setSelectedFile(file);
+// import {useState} from "react";
+// const getImageUrl= (image)=>{
+//
+// }
+//
+// export default function Uploader(){
+//     const [isOpen, setOpen] = useState(false);
+//     const [image, setSelectedImage] = useState(null);
+//     const handleImageChange = (e) => {
+//             const file = e.target.files[0];
+//             if (file) {
+//                 const reader = new FileReader();
+//                 reader.onload = (e) => {
+//                     setSelectedImage(e.target.result);
+//                 };
+//                 reader.readAsDataURL(file);
+//
+//             }
+//         }
+//
+//         const submit =async ()=>{
+//         const response = await fetch("https://jsonplaceholder.typicode.com/posts/",{
+//             method: "POST",
+//             contentType: "application/json",
+//             body: JSON.stringify({
+//                 image:getImageUrl(image)
+//             })
+//         });
+//         }
+//     return (
+//             <section className={`flex flex-col justify-center items-center pt-[20px]`}>
+//                 <p className={`py-[5px] px-[30px] text-xl font-bold bg-gray-300 rounded-md`}>My Resume</p>
+//                 <div className="flex flex-col items-center w-full my-[20px]">
+//                     <input
+//                         type="file"
+//                         accept="image/*"
+//                         onChange={handleImageChange}
+//                         className="hidden"
+//                         id="imageUpload"
+//                     />
+//                     <label
+//                         htmlFor="imageUpload"
+//                         className={`rounded-md flex justify-center items-center  w-[80%]
+//                 h-[200px] border-2 border-dashed border-gray-400 cursor-pointer
+//                 ${!image ? 'bg-gray-100' : ''}`}
+//                     >
+//                         {image ? (
+//                             <img
+//                                 src={image}
+//                                 alt="Selected"
+//                                 className="w-full h-full object-cover rounded-md"
+//                             />
+//                         ) : (
+//                             <p className="text-center text-gray-500">Click to add image</p>
+//                         )}
+//                     </label>
+//                 </div>
+//                 <button className={`text-white bg-gray-400 hover:bg-gray-500
+//                                     px-[10px] py-[5px] mb-[20px] rounded-md`}
+//                 onClick={() => {
+//                     if (image) {
+//                         submit();
+//                     }
+//                     }}>Upload</button>
+//             </section>
+//         )
+// }
+//
+//
+//
+import { useState } from "react";
 
+export default function Uploader() {
+    const [image, setSelectedImage] = useState(null);
+    const [imageUrl, setImageUrl] = useState(null);
+    const [isUploading, setIsUploading] = useState(false);
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
         if (file) {
             const reader = new FileReader();
-            reader.onloadend = () => {
-                setFilePreview(reader.result);
+            reader.onload = (e) => {
+                setSelectedImage(e.target.result);
+                setImageUrl(null);
             };
             reader.readAsDataURL(file);
         }
     };
-        return (
-        <div className>
-            <ProviderNavbar/>
-            <div className={`${styles.background} flex`}>
-                <Layout props={2}/>
-                <div className={`bg-white flex m-[7%] rounded-md w-[70%] justify-center items-center`}>
-                    <div className={`flex justify-center items-center
-                     flex-col ${selectedFile? 'hidden': 'flex'}`}>
-                            <Icon icon="icons8:upload-2"
-                                  onClick={()=>
-                                      document.getElementById('fileInput').click()}
-                                  className={"cursor-pointer text-white px-4 py-2 rounded-md w-[100px] h-[100%]"}
-                                  style={{color: 'black'}}/>
-                            <p className={'font-thin md:text-lg'}>Click to add your cv</p>
-                            <input type="file" id="fileInput" className="hidden"
-                                   accept="image/*" onChange={handleFileChange}/>
-                        {
-                            filePreview && (
-                            <div>
-                                <h3>File Preview:</h3>
 
-                                {selectedFile?.type.startsWith('image/') && (
-                                    <img
-                                        src={filePreview}
-                                        alt="Preview"
-                                        className={`w-[70%]`}
-                                    />
-                                )}
-                                {selectedFile?.type.startsWith('audio/') && (
-                                    <audio controls>
-                                        <source src={filePreview} type={selectedFile.type}/>
-                                        Audio files not supported.
-                                    </audio>
-                                )}
-                                {selectedFile?.type.startsWith('video/') && (
-                                    <video controls width="400">
-                                        <source src={filePreview} type={selectedFile.type}/>
-                                        Video files not supported.
-                                    </video>
-                                )
-                                }
-                            </div>
-                        )}
-                    </div>
-                    <Button variant="contained" color="primary" component="span"
-                            onClick={selectedFile ? ()=>submit : ()=>{
-                                toast('Upload resume first',)
-                            }}>
-                        {selectedFile? 'Save': 'Update Resume'}
-                    </Button>
-                </div>
+    const uploadImageToCloudinary = async (imageData) => {
+        const data = new FormData();
+        data.append("file", imageData);
+        data.append("upload_preset", "your-upload-preset");
+        try {
+            const response = await fetch(
+                "https://api.cloudinary.com/v1_1/your-cloud-name/image/upload",
+                {
+                    method: "POST",
+                    body: data,
+                }
+            );
+            const result = await response.json();
+            return result.secure_url; // Return the image URL from Cloudinary
+        } catch (err) {
+            console.error("Error uploading the image", err);
+            return null;
+        }
+    };
+
+    const submit = async () => {
+        if (!image) return;
+
+        setIsUploading(true);
+
+        const imageUrl = await uploadImageToCloudinary(image);
+
+        if (imageUrl) {
+            setImageUrl(imageUrl);
+            setSelectedImage(null);
+        }
+
+        setIsUploading(false);
+    };
+
+    return (
+        <section className="flex flex-col justify-center items-center pt-[20px]">
+            <div className="flex flex-col items-center w-full my-[20px]">
+                <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageChange}
+                    className="hidden"
+                    id="imageUpload"
+                />
+
+                <label
+                    htmlFor="imageUpload"
+                    className={`rounded-md flex justify-center items-center w-[80%] h-[200px] border-2 
+                    border-dashed border-gray-400 cursor-pointer ${!image ? 'bg-gray-100' : ''}`}
+                >
+                    {image ? (
+                        <img
+                            src={image}
+                            alt="Selected"
+                            className="w-full h-full object-cover rounded-md"
+                        />
+                    ) : (
+                        imageUrl ? (
+                            <img
+                                src={imageUrl}
+                                alt="Uploaded"
+                                className="w-full h-full object-cover rounded-md"
+                            />
+                        ) : (
+                            <p className="text-center text-gray-500">Click to add image</p>
+                        )
+                    )}
+                </label>
             </div>
-        </div>
-        )
+
+            <button
+                className={`text-white bg-green-600 hover:bg-green-700 
+                px-[10px] py-[5px] mb-[20px] rounded-md`}
+                onClick={submit}
+                disabled={isUploading || !image}
+            >
+                {isUploading ? "Uploading..." : "Upload"}
+            </button>
+        </section>
+    );
 }

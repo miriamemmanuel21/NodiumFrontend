@@ -8,7 +8,7 @@ export  default function AppliedJobs(){
             <ProviderNavbar/>
             <div className={'flex flex-col md:flex-row '}>
                 <div className={`h-screen overflow-y-auto`}>
-                    <Layout props={3}/>
+                    <Layout props={2}/>
                 </div>
                 <div className={`p-[5%] ${styles.background} w-[100%]`}>
                     <AppliedJobsContents/>

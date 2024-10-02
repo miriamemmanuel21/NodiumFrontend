@@ -21,6 +21,15 @@
         transform: translateX(0);
     }
 }
+@keyframes __slideOutLeft {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
 .tag:hover{
     background: linear-gradient(to right,#E6E3EB 50%,#F9F1ED);
 }
@@ -30,9 +39,47 @@
 .background{
     background: linear-gradient(to right,#F9F1ED 30%,#E6E3EB , #F9F1ED,#E6E3EB,#F9F1ED,#F9F1ED );
 }
-.slider{
-    animation: __slideInLeft 1s;
+.slideOut{
+    animation: __slideOutLeft .5s;
+}
+.slideIn{
+    animation: __slideInLeft .5s;
 }
 .underline{
     text-decoration: underline;
+}
+.text p:hover{
+    text-decoration: underline;
+}
+
+.text>p{
+    text-align: center;
+    font-weight: normal;
+    font-size: small;
+    text-decoration: #005c25;
+}
+.login{
+    animation:slider;
+    padding: 0;
+    border-radius:10px;
+    background: background
+}
+.nextedCSS01{
+    background: #f0f0f0;
+}
+.form > section {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.section-field {
+    border: 2px solid black;
+    width: 200px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
 }
