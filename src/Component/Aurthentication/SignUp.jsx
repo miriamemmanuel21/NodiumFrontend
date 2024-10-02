@@ -9,7 +9,7 @@ import styles from '../../index.module.css';
 
 
 export default function SignupForm() {
-    const baseURL = "http://localhost:8080";
+    const baseURL = "https://api.render.com/v1/services/rnd_uIdV51UuTUWN6TK22Byaj4fZ0bwA/deploys";
     localStorage.setItem("base_url",baseURL);
 
     let userSchema = Yup.object().shape({
